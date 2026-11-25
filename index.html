@@ -1,0 +1,2386 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>2026 東京賞楓＆聖誕點燈｜6天5夜隨身行程手冊</title>
+<style>
+    :root {
+      --bg: #faf7f2;
+      --surface: #ffffff;
+      --surface-soft: #f4efe6;
+      --text: #2c241e;
+      --text-muted: #665a50;
+      --border: #e5dccf;
+      --accent: #b8442a;
+      --accent-soft: #fbece7;
+      --gold: #b87c1e;
+      --gold-soft: #fdf5e6;
+      --night: #1f3352;
+      --night-soft: #eaf0f8;
+      --green: #2d6a4f;
+      --green-soft: #e8f4ee;
+      --shadow: 0 4px 14px rgba(44, 36, 30, 0.06);
+      --radius: 14px;
+      --base-size: 16px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: var(--base-size);
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding-bottom: 4rem;
+    }
+
+    body.large-font {
+      --base-size: 19px;
+    }
+
+    /* Sticky Top Navigation */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 247, 242, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    }
+
+    .topbar-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0.6rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 0.15rem 0;
+    }
+
+    .nav-links::-webkit-scrollbar { display: none; }
+
+    .nav-link {
+      flex: 0 0 auto;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.38rem 0.72rem;
+      border-radius: 999px;
+      transition: all 0.18s ease;
+      white-space: nowrap;
+    }
+
+    .nav-link:hover {
+      background: var(--surface-soft);
+      color: var(--text);
+    }
+
+    .nav-link.active {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .font-btn {
+      flex: 0 0 auto;
+      border: 1.5px solid var(--accent);
+      background: #fff;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 0.38rem 0.75rem;
+      border-radius: 999px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.18s ease;
+    }
+
+    .font-btn.is-on {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 1.25rem 1rem 0;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: linear-gradient(135deg, #2b2019 0%, #6e2b1d 55%, #b8442a 100%);
+      color: #fff;
+      border-radius: 18px;
+      padding: 1.65rem 1.5rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.18);
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.65rem;
+      line-height: 1.3;
+    }
+
+    .hero p {
+      margin: 0;
+      opacity: 0.92;
+      font-size: 0.95rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.75rem;
+      margin-top: 1.15rem;
+    }
+
+    .stat-pill {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 0.65rem 0.85rem;
+      font-size: 0.86rem;
+    }
+
+    .stat-pill strong {
+      display: block;
+      font-size: 0.78rem;
+      opacity: 0.82;
+      margin-bottom: 0.15rem;
+    }
+
+    /* Section Cards */
+    section {
+      scroll-margin-top: 4.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0 0 0.9rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--surface-soft);
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      background: var(--surface-soft);
+      color: var(--text-muted);
+    }
+
+    .badge.new {
+      background: var(--night);
+      color: #fff;
+    }
+
+    .badge.maple {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .badge.gold {
+      background: var(--gold-soft);
+      color: var(--gold);
+    }
+
+    /* Grid Helpers */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.9rem;
+    }
+
+    .subbox {
+      background: var(--surface-soft);
+      border-radius: 12px;
+      padding: 0.9rem 1rem;
+    }
+
+    .subbox.night {
+      background: var(--night-soft);
+      border: 1px solid #c9d9ee;
+    }
+
+    .subbox.green {
+      background: var(--green-soft);
+      border: 1px solid #c6e2d3;
+    }
+
+    .subbox.gold {
+      background: var(--gold-soft);
+      border: 1px solid #ecd9b4;
+    }
+
+    .subbox h3 {
+      margin: 0 0 0.45rem;
+      font-size: 1rem;
+    }
+
+    ul.clean {
+      margin: 0.35rem 0 0;
+      padding-left: 1.2rem;
+    }
+
+    ul.clean li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* Transit Toggle */
+    .tab-row {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.85rem;
+    }
+
+    .tab-btn {
+      border: 1.5px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 0.45rem 0.9rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .tab-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .transit-panel { display: none; }
+    .transit-panel.active { display: block; }
+
+    /* Timeline Items */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .stop {
+      border-left: 3px solid var(--accent);
+      padding-left: 0.9rem;
+    }
+
+    .stop.night-stop {
+      border-left-color: var(--night);
+    }
+
+    .stop-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.45rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .stop-time {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 0.12rem 0.5rem;
+      border-radius: 6px;
+    }
+
+    .stop.night-stop .stop-time {
+      color: var(--night);
+      background: var(--night-soft);
+    }
+
+    .stop-title {
+      font-weight: 700;
+      font-size: 1.02rem;
+    }
+
+    .map-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--night);
+      background: var(--night-soft);
+      text-decoration: none;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid #c9d9ee;
+    }
+
+    .map-link:hover {
+      background: var(--night);
+      color: #fff;
+    }
+
+    .elder-tip {
+      margin-top: 0.75rem;
+      background: var(--gold-soft);
+      border-left: 4px solid var(--gold);
+      padding: 0.65rem 0.9rem;
+      border-radius: 0 10px 10px 0;
+      font-size: 0.9rem;
+    }
+
+    /* Checklist */
+    .checklist-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.65rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.45rem 0.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .check-item:hover { background: rgba(0, 0, 0, 0.03); }
+
+    .check-item input[type="checkbox"] {
+      width: 1.15rem;
+      height: 1.15rem;
+      margin-top: 0.2rem;
+      accent-color: var(--green);
+      cursor: pointer;
+    }
+
+    .check-item.done span {
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.38rem; }
+      .card { padding: 1rem; }
+    }
+
+    /* Tabbed Day-by-Day Layout */
+    main section[id] {
+      display: none;
+    }
+    main section[id].tab-active {
+      display: block;
+      animation: fadeTab 0.2s ease;
+    }
+    @keyframes fadeTab {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .day-map-wrap {
+      margin: 0.75rem 0 1.15rem;
+      background: #faf6ee;
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 0.75rem 0.9rem;
+    }
+    .day-map-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .map-legend {
+      font-size: 0.76rem;
+      font-weight: 600;
+      background: #fff;
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+    }
+    .day-map-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      background: #faf6ee;
+    }
+    .transit-step {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin: 0.55rem 0 0.85rem 0.25rem;
+      padding: 0.48rem 0.85rem;
+      background: #eef5fb;
+      border: 1px solid #c7dcf0;
+      border-left: 4px solid #1b6ca8;
+      border-radius: 10px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #164e78;
+    }
+    .day-pager {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .pager-btn {
+      border: 1.5px solid var(--border);
+      background: var(--surface-soft);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .pager-btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+  
+    /* === UX Optimization Enhancements === */
+    .nav-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+    }
+    .nav-wrap::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 28px;
+      background: linear-gradient(to right, rgba(250, 248, 245, 0), rgba(250, 248, 245, 0.96));
+      pointer-events: none;
+      display: none;
+    }
+    .stop-maps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+      padding-top: 9px;
+      border-top: 1px dashed var(--border);
+    }
+    .stop-maps .map-link {
+      font-size: 0.84rem;
+      padding: 5px 10px;
+    }
+    .backup-details {
+      margin-top: 10px;
+      border: 1px dashed #d6c5b3;
+      border-radius: 10px;
+      background: #fdf9f3;
+      padding: 8px 12px;
+    }
+    .backup-details.backup-stop {
+      margin: 10px 0 12px;
+      padding: 10px 14px;
+    }
+    .backup-details summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: #8c4a1c;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .backup-details summary::-webkit-details-marker {
+      display: none;
+    }
+    .backup-details summary::after {
+      content: "展開 ▾";
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #9a5b2c;
+      background: #f6eadc;
+      padding: 2px 8px;
+      border-radius: 999px;
+      flex-shrink: 0;
+    }
+    .backup-details[open] summary::after {
+      content: "收合 ▴";
+    }
+    .backup-details > p {
+      margin: 8px 0 2px;
+      font-size: 0.94rem;
+      color: var(--ink-soft);
+    }
+    .backup-details.backup-stop .stop {
+      margin-top: 10px;
+      margin-bottom: 0;
+      background: #fff;
+    }
+    .day-map-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 10px;
+    }
+    .map-scroll-hint {
+      display: none;
+      font-size: 0.78rem;
+      color: #6b7280;
+      text-align: center;
+      margin: 2px 0 6px;
+    }
+    @media (max-width: 720px) {
+      .nav-wrap::after {
+        display: block;
+      }
+      .nav-links {
+        padding-right: 26px;
+      }
+      .day-map-svg {
+        min-width: 680px;
+      }
+      .map-scroll-hint {
+        display: block;
+      }
+      .hero {
+        padding: 20px 16px;
+      }
+    }
+
+    /* === Real Interactive Leaflet Street Maps === */
+    .real-map-box {
+      padding: 14px 16px 14px;
+    }
+    .real-map-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .real-map-header .day-map-title {
+      margin: 0;
+    }
+    .real-map-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .real-map-legend {
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .leg-solid {
+      display: inline-block;
+      width: 18px;
+      height: 3px;
+      background: #1d6fa5;
+      border-radius: 2px;
+      vertical-align: middle;
+    }
+    .leg-dash {
+      display: inline-block;
+      width: 18px;
+      height: 0;
+      border-top: 3px dashed #d97706;
+      vertical-align: middle;
+    }
+    .map-reset-btn {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--ink);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .map-reset-btn:hover {
+      background: #f6efe7;
+      border-color: var(--accent);
+    }
+    .leaflet-day-map {
+      width: 100%;
+      height: 320px;
+      border-radius: 10px;
+      border: 1px solid #e5d8c8;
+      z-index: 1;
+      background: #f3ede4;
+    }
+    .map-num-marker {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #b63a2b;
+      color: #fff;
+      font-weight: 800;
+      font-size: 13px;
+      border: 2.5px solid #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+    }
+    .map-num-marker.is-start {
+      background: #1e6b45;
+    }
+    .map-stop-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .map-stop-pill {
+      border: 1px solid #e2d4c3;
+      background: #fff;
+      color: var(--ink);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .map-stop-pill:hover, .map-stop-pill.is-focused {
+      background: #b63a2b;
+      color: #fff;
+      border-color: #b63a2b;
+    }
+    .map-morning-note {
+      margin-top: 8px;
+      font-size: 0.82rem;
+      color: #1d5b86;
+      background: #eff6fc;
+      border: 1px solid #cfe3f4;
+      border-radius: 8px;
+      padding: 6px 10px;
+    }
+    .map-popup-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #2b211a;
+      margin-bottom: 4px;
+    }
+    .map-popup-sub {
+      font-size: 0.82rem;
+      color: #5c4f44;
+      margin-bottom: 6px;
+    }
+    .map-popup-link {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #1d6fa5 !important;
+      text-decoration: none;
+    }
+    .map-offline-fallback {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 20px;
+      text-align: center;
+      color: #6b5d50;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 720px) {
+      .leaflet-day-map {
+        height: 270px;
+      }
+    }
+
+    /* === Second-Pass UX Refinements === */
+    .section-title {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .top-quick-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: auto;
+    }
+    .quick-step-btn {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--ink-soft);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .quick-step-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: #fff5f2;
+    }
+    .map-lock-btn.is-unlocked {
+      background: #e6f4ea;
+      border-color: #1e6b45;
+      color: #1e6b45;
+    }
+    .real-map-box.is-collapsed .leaflet-day-map,
+    .real-map-box.is-collapsed .map-stop-pills,
+    .real-map-box.is-collapsed .map-morning-note,
+    .real-map-box.is-collapsed .map-lock-btn,
+    .real-map-box.is-collapsed [data-map-reset] {
+      display: none !important;
+    }
+    .map-jump-btn {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #b63a2b;
+      background: #fdf2f0;
+      border: 1px solid #f0c7be;
+      border-radius: 6px;
+      padding: 2px 8px;
+      cursor: pointer;
+    }
+    .stop.stop-flash {
+      animation: stopFlash 1.6s ease;
+    }
+    @keyframes stopFlash {
+      0% { box-shadow: 0 0 0 3px rgba(182, 58, 43, 0.45); background: #fff8f6; }
+      100% { box-shadow: none; background: #fff; }
+    }
+    body.large-font .map-stop-pill,
+    body.large-font .stop-maps .map-link,
+    body.large-font .map-reset-btn,
+    body.large-font .quick-step-btn {
+      font-size: 0.96rem;
+      padding: 7px 13px;
+    }
+    body.large-font .backup-details summary {
+      font-size: 1.04rem;
+    }
+    body.large-font .transit-step {
+      font-size: 0.98rem;
+    }
+
+    /* === Taiwan-MRT-Style Transit Visuals === */
+    .transit-step.mrt-card {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.48rem;
+      padding: 0.68rem 0.9rem;
+      background: #f5f9fd;
+      border: 1px solid #c7dcf0;
+      border-left: 4px solid #1b6ca8;
+    }
+    .mrt-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      font-size: 0.82rem;
+      color: #164e78;
+      font-weight: 700;
+    }
+    .mrt-route {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.38rem 0.45rem;
+    }
+    .mrt-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.32rem;
+      padding: 0.18rem 0.55rem 0.18rem 0.24rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    }
+    .mrt-code {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 1.35rem;
+      height: 1.35rem;
+      padding: 0 0.24rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.24);
+      font-size: 0.75rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .mrt-stn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.28rem;
+      padding: 0.18rem 0.52rem 0.18rem 0.24rem;
+      border-radius: 8px;
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      color: #1e293b;
+      font-size: 0.84rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .mrt-sc {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.12rem 0.34rem;
+      border-radius: 5px;
+      font-size: 0.72rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+    .mrt-conn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #334155;
+      padding: 0.12rem 0.46rem;
+      border-radius: 999px;
+      background: #e2e8f0;
+      border-bottom: 3px solid #64748b;
+      white-space: nowrap;
+    }
+    .mrt-conn::after {
+      content: '➔';
+      font-weight: 900;
+    }
+    .mrt-xfer {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2rem;
+      padding: 0.16rem 0.48rem;
+      border-radius: 999px;
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      color: #92400e;
+      font-size: 0.75rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .mrt-note {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #334155;
+      line-height: 1.45;
+    }
+    .mrt-alt {
+      margin-top: 0.1rem;
+      padding-top: 0.38rem;
+      border-top: 1px dashed #cbd5e1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.32rem;
+    }
+    .mrt-alt-label {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #475569;
+    }
+
+    /* Official Tokyo Metro / Toei / JR Line Colors */
+    .mrt-z  { background-color: #8F76D6; border-color: #8F76D6; color: #fff; }
+    .mrt-m  { background-color: #F62E36; border-color: #F62E36; color: #fff; }
+    .mrt-g  { background-color: #FF9500; border-color: #FF9500; color: #fff; }
+    .mrt-c  { background-color: #00BB85; border-color: #00BB85; color: #fff; }
+    .mrt-a  { background-color: #E85298; border-color: #E85298; color: #fff; }
+    .mrt-i  { background-color: #0079C2; border-color: #0079C2; color: #fff; }
+    .mrt-e  { background-color: #B6007A; border-color: #B6007A; color: #fff; }
+    .mrt-jo { background-color: #0068B7; border-color: #0068B7; color: #fff; }
+    .mrt-jy { background-color: #80C342; border-color: #80C342; color: #1a2e05; }
+    .mrt-jb { background-color: #F5B700; border-color: #F5B700; color: #1e293b; }
+    .mrt-jy .mrt-code { background: rgba(0,0,0,0.14); color: #1a2e05; }
+    .mrt-jb .mrt-code { background: rgba(0,0,0,0.14); color: #1e293b; }
+    .mrt-conn.mrt-z, .mrt-conn.mrt-m, .mrt-conn.mrt-g, .mrt-conn.mrt-c,
+    .mrt-conn.mrt-a, .mrt-conn.mrt-i, .mrt-conn.mrt-e, .mrt-conn.mrt-jo,
+    .mrt-conn.mrt-jy, .mrt-conn.mrt-jb {
+      background: #ffffff;
+      color: #1e293b;
+      border-width: 1px 1px 3px 1px;
+      border-style: solid;
+    }
+
+    /* Overview Line Color Legend Grid */
+    .mrt-legend-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 0.6rem;
+      margin-top: 0.65rem;
+    }
+    .mrt-legend-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.55rem;
+      padding: 0.6rem 0.72rem;
+      border-radius: 10px;
+      background: #fafaf9;
+      border: 1px solid var(--border);
+    }
+    .mrt-legend-desc {
+      font-size: 0.82rem;
+      line-height: 1.45;
+      color: var(--text);
+    }
+    .mrt-legend-desc strong {
+      display: block;
+      font-size: 0.86rem;
+      margin-bottom: 0.1rem;
+    }
+
+    body.large-font .mrt-line { font-size: 0.9rem; padding: 0.22rem 0.62rem 0.22rem 0.28rem; }
+    body.large-font .mrt-stn { font-size: 0.94rem; padding: 0.22rem 0.6rem 0.22rem 0.28rem; }
+    body.large-font .mrt-sc { font-size: 0.82rem; }
+    body.large-font .mrt-conn, body.large-font .mrt-xfer { font-size: 0.86rem; }
+    body.large-font .mrt-note, body.large-font .mrt-head, body.large-font .mrt-legend-desc { font-size: 0.92rem; }
+    .mrt-dir {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.22rem;
+      padding: 0.16rem 0.52rem;
+      border-radius: 6px;
+      background: #fffbeb;
+      border: 1.5px solid #f59e0b;
+      color: #92400e;
+      font-size: 0.78rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    body.large-font .mrt-dir { font-size: 0.88rem; padding: 0.2rem 0.6rem; }
+
+    /* === Offline Relative-Position SVG Map === */
+    .offline-day-map {
+      position: relative;
+      width: 100%;
+      height: 320px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, #fcfaf5 0%, #f5f0e6 100%);
+      overflow: hidden;
+      user-select: none;
+    }
+    .offline-map-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 5;
+      padding: 0.22rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid #d6cfc2;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #475569;
+      pointer-events: none;
+    }
+    .offline-edge-hint {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      z-index: 5;
+      padding: 0.24rem 0.62rem;
+      border-radius: 999px;
+      background: rgba(255, 251, 235, 0.96);
+      border: 1px solid #f59e0b;
+      color: #92400e;
+      font-size: 0.75rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .offline-popup {
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 10;
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 0.65rem 0.85rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .offline-popup-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .offline-popup-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.45rem;
+      margin-top: 0.15rem;
+    }
+    .offline-popup-close {
+      border: none;
+      background: #f1f5f9;
+      color: #475569;
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .map-reset-btn.map-mode-btn.is-offline {
+      background: #eef5fb;
+      border-color: #1b6ca8;
+      color: #164e78;
+    }
+
+
+    @media (max-width: 640px) {
+      .transit-step.mrt-card { padding: 0.6rem 0.72rem; }
+      .mrt-route { gap: 0.32rem; }
+    }
+</style>
+<link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script></head>
+<body>
+<!-- Fixed/Sticky Top Directory -->
+<header class="topbar">
+<div class="topbar-inner">
+<div class="nav-wrap"><nav aria-label="行程目錄" class="nav-links">
+<a class="nav-link active" href="#overview">總覽交通</a>
+<a class="nav-link" href="#day1">11/30 抵達</a>
+<a class="nav-link" href="#day2">12/1 外苑</a>
+<a class="nav-link" href="#day3">12/2 新宿桌球</a>
+<a class="nav-link" href="#day4">12/3 東大皇居</a>
+<a class="nav-link" href="#day5">12/4 下町慢遊</a>
+<a class="nav-link" href="#day6">12/5 返台</a>
+<a class="nav-link" href="#shopping">採買美食</a>
+<a class="nav-link" href="#tips">氣溫清單</a>
+</nav></div>
+<button aria-pressed="false" class="font-btn" id="fontToggleBtn" type="button">大字體：關</button>
+</div>
+</header>
+<main class="container">
+<!-- Hero -->
+<!-- Overview & Airport Transit -->
+<section id="overview"><div class="hero">
+<span class="hero-tag">2026/11/30（一）– 12/05（六）｜帶爸媽慢遊版</span>
+<h1>東京賞楓銀杏＆聖誕點燈隨身手冊</h1>
+<p>全程住宿錦糸町公寓，結合賞楓銀杏、12/1 表參道＋六本木點燈、12/3 皇居乾通＋東京鐵塔與長輩省腳力動線。</p>
+<div class="hero-stats">
+<div class="stat-pill">
+<strong>去程航班 JL802</strong>
+          11/30 桃園 10:40 ➔ 成田 T2 14:40
+        </div>
+<div class="stat-pill">
+<strong>回程航班 JL809</strong>
+          12/5 成田 T2 18:05 ➔ 桃園 21:15
+        </div>
+<div class="stat-pill">
+<strong>住宿基地</strong>
+          錦糸町公寓（墨田區錦糸 2 丁目）
+        </div>
+</div>
+</div>
+<div class="card">
+<div class="section-title">
+<h2>🚆 住宿與機場直達交通總覽</h2>
+<span class="badge">免轉車首選</span>
+<div class="top-quick-nav"><button class="quick-step-btn" data-tab-jump="day1" title="下一頁：11/30" type="button">11/30 ›</button></div></div>
+<p style="margin-top:0;">
+          住宿位於
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=東京都墨田区錦糸2丁目" rel="noopener" target="_blank">📍 錦糸町錦糸2丁目</a>，
+          鄰近 JR 總武線快速與半藏門線。去回程使用 <strong>Suica / Welcome Suica</strong> 直接進出站即可，免買周遊券。
+        </p>
+<div aria-label="機場交通方案切換" class="tab-row" role="tablist">
+<button class="tab-btn active" data-transit="jr" type="button">方案一：JR 總武線快速（推薦）</button>
+<button class="tab-btn" data-transit="bus" type="button">方案二：Skytree Shuttle 直達巴士</button>
+</div>
+<div class="transit-panel active subbox green" id="transit-jr">
+<h3>JR 總武線快速（成田 T2 地下月台 ➔ 錦糸町）</h3>
+<ul class="clean">
+<li><strong>票價與購票</strong>：刷 IC 卡約 ¥1,221～1,230，<strong>不需購買特急券</strong>；可加購 4、5 號車廂「綠色車廂（Green Car）」對號座讓長輩舒服休息。</li>
+<li><strong>車程</strong>：免轉車直達約 1 小時 15 分鐘。</li>
+<li><strong>11/30 第 2 航廈下午關鍵班次</strong>：<strong>16:01 發車 ➔ 17:17 抵錦糸町</strong>（首選）；若出關延誤可搭 <strong>17:01 ➔ 18:17</strong>。</li>
+</ul>
+</div>
+<div class="transit-panel subbox gold" id="transit-bus">
+<h3>高速巴士 Skytree Shuttle（適合行李多、不想走地下通道）</h3>
+<ul class="clean">
+<li><strong>乘車處與票價</strong>：第 2 航廈 1F <strong>10 號乘車處</strong>（T1 為 8 號、T3 為 11 號），成人約 ¥2,000。</li>
+<li><strong>11/30 下午黃金班次</strong>：第 2 航廈 <strong>16:15 發車 ➔ 17:20 直達錦糸町站</strong>（錯過 16:01 JR 的完美備案）。</li>
+</ul>
+</div>
+</div>
+<div class="card">
+<div class="section-title">
+<h2>🎨 台北捷運式・本趟地鐵／JR 路線顏色對照表</h2>
+<span class="badge">認色＋看代號</span>
+</div>
+<p style="margin-top:0;">東京地鐵跟台北捷運一樣用<strong>「顏色＋英文字母＋數字」</strong>認路！在車站只要找對應顏色標誌與站號，就不會坐錯線：</p>
+<div class="mrt-legend-grid">
+  <div class="mrt-legend-item">
+    <span class="mrt-line mrt-z"><span class="mrt-code">Z</span>半藏門線</span>
+    <div class="mrt-legend-desc"><strong>紫色（住宿家門口主線）</strong>Z13 錦糸町直達 Z03 青山一丁目、Z02 表參道、Z14 押上、Z11 清澄白河。</div>
+  </div>
+  <div class="mrt-legend-item">
+    <span class="mrt-line mrt-jo"><span class="mrt-code">JO</span>JR 總武線快速</span>
+    <div class="mrt-legend-desc"><strong>藍色（機場往返）</strong>JO36 成田機場 T2 ⇄ JO22 錦糸町，全程免轉車直達。</div>
+  </div>
+  <div class="mrt-legend-item">
+    <span class="mrt-line mrt-jb"><span class="mrt-code">JB</span>JR 總武線各停</span>
+    <div class="mrt-legend-desc"><strong>黃色（新宿方向）</strong>JB22 錦糸町直達 JB12 千駄ヶ谷（新宿御苑）、JB10 新宿。</div>
+  </div>
+  <div class="mrt-legend-item">
+    <span class="mrt-line mrt-jy"><span class="mrt-code">JY</span>JR 山手線</span>
+    <div class="mrt-legend-desc"><strong>草綠色（環狀線）</strong>JY17 新宿 ⇄ JY15 高田馬場（2 站 5 分）。</div>
+  </div>
+  <div class="mrt-legend-item">
+    <span class="mrt-line mrt-m"><span class="mrt-code">M</span>丸之內線</span>
+    <div class="mrt-legend-desc"><strong>紅色（東大・東京站）</strong>M18 大手町 ⇄ M21 本郷三丁目（東大）、M17 東京站。</div>
+  </div>
+  <div class="mrt-legend-item">
+    <span class="mrt-line mrt-a"><span class="mrt-code">A</span>都營淺草線</span>
+    <div class="mrt-legend-desc"><strong>玫瑰粉（淺草方向）</strong>A20 押上 ➔ A18 淺草（雷門・仲見世通）。</div>
+  </div>
+  <div class="mrt-legend-item">
+    <span class="mrt-line mrt-e"><span class="mrt-code">E</span>都營大江戶線</span>
+    <div class="mrt-legend-desc"><strong>桃紅色（藏前・六本木）</strong>E11 藏前 ➔ E14 清澄白河；E24 青山一丁目 ➔ E23 六本木。</div>
+  </div>
+  <div class="mrt-legend-item">
+    <span class="mrt-line mrt-i"><span class="mrt-code">I</span>都營三田線</span>
+    <div class="mrt-legend-desc"><strong>深藍色（東京鐵塔）</strong>I08 日比谷 ➔ I06 御成門 / I05 芝公園。</div>
+  </div>
+</div>
+<div class="day-pager"><span></span><button class="pager-btn" data-tab-jump="day1" type="button">Day 1 (11/30) →</button></div>
+</div>
+</section>
+<!-- Day 1 -->
+<section id="day1">
+<div class="card">
+<div class="section-title">
+<h2>Day 1｜11/30（一）抵達東京・錦糸町安頓</h2>
+<span class="badge maple">輕鬆移動日</span>
+<div class="top-quick-nav"><button class="quick-step-btn" data-tab-jump="overview" title="上一頁：總覽" type="button">‹ 總覽</button><button class="quick-step-btn" data-tab-jump="day2" title="下一頁：12/1" type="button">12/1 ›</button></div></div>
+<div class="day-map-wrap real-map-box"><div class="real-map-header"><div class="day-map-title">🗺️ Day 1 實景街道地圖（預設聚焦錦糸町・點編號看詳情）</div><div class="real-map-controls"><button class="map-reset-btn map-mode-btn" data-map-mode="day1" type="button">📡 離線相對圖</button><button class="map-reset-btn map-lock-btn" data-map-lock="day1" type="button">🔒 鎖定拖曳</button><button class="map-reset-btn" data-map-reset="day1" type="button">🔄 全覽</button><button class="map-reset-btn map-collapse-btn" data-map-toggle="day1" type="button">收合地圖</button></div></div><div class="leaflet-day-map" id="leaflet-map-day1"></div><div class="offline-day-map" id="offline-map-day1" style="display:none;"></div><div class="map-stop-pills" id="map-pills-day1"></div></div>
+<div class="timeline">
+<div class="transit-step mrt-card">
+  <div class="mrt-head"><span>✈️ 抵達後交通｜成田機場第2航廈 ➔ 錦糸町</span><span>免轉車直達</span></div>
+  <div class="mrt-route">
+    <span class="mrt-line mrt-jo"><span class="mrt-code">JO</span>JR 總武線快速</span>
+    <span class="mrt-dir">🧭 往「東京・逗子／久里濱」方向</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-jo">JO36</span>空港第2ビル（成田 T2）</span>
+    <span class="mrt-conn mrt-jo">16:01 發・約 75 分</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-jo">JO22</span>錦糸町</span>
+  </div>
+  <div class="mrt-note">⚠️ 勿搭「N'EX 成田特快」（不停錦糸町）或「往成田空港」反方向 ｜ 💺 推薦加購 4–5 車 Green Car；錯過可改搭 <strong>16:15 晴空塔直達巴士（1F 10號乘車處）</strong></div>
+</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">14:40 – 17:30</span>
+<span class="stop-title">成田機場 T2 入境 ➔ 直達錦糸町公寓</span>
+</div>
+<p style="margin:0;">預計 15:25～15:45 出關，依現場時間搭 16:01 JR 總武線快速或 16:15 直達巴士前往錦糸町辦理入住。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=成田空港第2ターミナル" rel="noopener" target="_blank">📍 成田機場 T2</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=錦糸町駅" rel="noopener" target="_blank">📍 錦糸町站</a></div></div>
+<div class="transit-step">🚶 點對點交通：錦糸町公寓 → 步行 5–6 分平地直達 Olinas 商場 ＆ Life 超市（完全免搭車）</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">晚上（21:00 前）</span>
+<span class="stop-title">錦糸町晚餐＆逛 Super Sports XEBIO（Olinas 1F）・Life 超市</span>
+</div>
+<p style="margin:0;">安頓好後可先吃晚餐，再散步到 Olinas Core 1F 的 <strong>Super Sports XEBIO</strong>（開至 21:00）逛桌球與運動用品；<strong>彈性順遊</strong>：同棟 Olinas 也有 <strong>JINS 免稅店</strong> 與 <strong>眼鏡市場</strong>，若想配眼鏡可先驗光（一般鏡片最快約 30 分鐘、訂製鏡片須預留數天）。回程順道去 Life 超市買「岩泉優格」與隔天早餐。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=スーパースポーツゼビオ+オリナス錦糸町店" rel="noopener" target="_blank">📍 Super Sports XEBIO</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=ライフ錦糸町駅前店" rel="noopener" target="_blank">📍 Life 超市</a></div></div>
+</div>
+<div class="day-pager"><button class="pager-btn" data-tab-jump="overview" type="button">← 出發總覽</button><button class="pager-btn" data-tab-jump="day2" type="button">Day 2 (12/1) →</button></div>
+</div>
+</section>
+<!-- Day 2 -->
+<section id="day2">
+<div class="card">
+<div class="section-title">
+<h2>Day 2｜12/1（二）神宮外苑銀杏・邁泉豬排・明治神宮・表參道＆六本木點燈</h2>
+<span class="badge gold">金黃銀杏＋點燈首日</span>
+<div class="top-quick-nav"><button class="quick-step-btn" data-tab-jump="day1" title="上一頁：11/30" type="button">‹ 11/30</button><button class="quick-step-btn" data-tab-jump="day3" title="下一頁：12/2" type="button">12/2 ›</button></div></div>
+<div class="day-map-wrap real-map-box"><div class="real-map-header"><div class="day-map-title">🗺️ Day 2 實景街道地圖（青山外苑・表參道原宿・六本木）</div><div class="real-map-controls"><button class="map-reset-btn map-mode-btn" data-map-mode="day2" type="button">📡 離線相對圖</button><button class="map-reset-btn map-lock-btn" data-map-lock="day2" type="button">🔒 鎖定拖曳</button><button class="map-reset-btn" data-map-reset="day2" type="button">🔄 全覽</button><button class="map-reset-btn map-collapse-btn" data-map-toggle="day2" type="button">收合地圖</button></div></div><div class="leaflet-day-map" id="leaflet-map-day2"></div><div class="offline-day-map" id="offline-map-day2" style="display:none;"></div><div class="map-stop-pills" id="map-pills-day2"></div><div class="map-morning-note">🚇 早上：半藏門線「錦糸町」免轉車直達「青山一丁目」（約 25 分・IC ¥210）</div></div>
+<div class="timeline">
+<div class="transit-step mrt-card">
+  <div class="mrt-head"><span>🚇 出發交通｜錦糸町 ➔ 神宮外苑</span><span>紫色線直達・免轉車</span></div>
+  <div class="mrt-route">
+    <span class="mrt-line mrt-z"><span class="mrt-code">Z</span>半藏門線</span>
+    <span class="mrt-dir">🧭 往「渋谷・中央林間」方向</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-z">Z13</span>錦糸町</span>
+    <span class="mrt-conn mrt-z">免轉車 約 25 分</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-z">Z03</span>青山一丁目</span>
+  </div>
+  <div class="mrt-note">⚠️ 勿搭成往「押上・久喜」方向 ｜ 🛗 搭電梯出站步行 5 分即達銀杏並木</div>
+</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">09:00 – 10:45</span>
+<span class="stop-title">明治神宮外苑銀杏並木（早點人少好拍）</span>
+</div>
+<p style="margin:0;">兩側金黃銀杏大道平坦好走，適合幫爸媽拍滿版合照，拍完可在旁休息喝杯咖啡。<br/></p>
+<details class="backup-details"><summary>🍁 若外苑銀杏已掉光：點開看「代代木公園」替代方案</summary><p><strong>🍁 掉葉備案</strong>：若出發前外苑銀杏已掉光，可改去免費的「<strong>代代木公園</strong>」看紅楓與櫸樹（半藏門線到表參道或明治神宮前步行即達，11:00 再走約 10 分去吃邁泉豬排，動線幾乎不變）。</p></details><div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=明治神宮外苑いちょう並木" rel="noopener" target="_blank">📍 神宮外苑</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=代々木公園" rel="noopener" target="_blank">📍 代代木公園（備案）</a></div></div>
+<div class="transit-step mrt-card">
+  <div class="mrt-head"><span>🚶／🚇 點對點交通｜神宮外苑 ➔ 邁泉豬排（表參道）</span><span>步行 12 分 或 地鐵 1 站</span></div>
+  <div class="mrt-route">
+    <span class="mrt-line mrt-z"><span class="mrt-code">Z</span>半藏門線</span>
+    <span class="mrt-dir">🧭 往「渋谷・中央林間」方向</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-z">Z03</span>青山一丁目</span>
+    <span class="mrt-conn mrt-z">1 站・約 2 分</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-z">Z02</span>表參道</span>
+  </div>
+  <div class="mrt-note">🚶 天氣好可沿表參道平地散步 12 分；想省腳力搭紫色線往「渋谷」1 站至表參道 <strong>A2 出口</strong>走 3 分</div>
+</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">11:00 – 12:30</span>
+<span class="stop-title">表參道午餐：とんかつ まい泉 青山本店（邁泉豬排）</span>
+</div>
+<p style="margin:0;">11:00 開門（無休），建議剛開門就入座吃招牌「用筷子就能夾斷」的軟嫩腰內豬排，免久候。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=とんかつ+まい泉+青山本店" rel="noopener" target="_blank">📍 邁泉青山本店</a></div></div>
+<div class="transit-step">🚶 點對點交通：邁泉豬排 → 步行 3–5 分接明治通逛街，再進明治神宮森林參拜（全部步行圈內）</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">12:45 – 14:45</span>
+<span class="stop-title">明治通逛街（niko and ...・ABC-MART・ASICS 原宿）➔ 明治神宮參拜</span>
+</div>
+<p style="margin:0;">沿平緩的表參道與明治通散步：逛 <strong>niko and ... TOKYO</strong>（11:00–21:00，日系服飾與咖啡座可讓爸媽休息）、<strong>ABC-MART GRAND STAGE 原宿店</strong>（11:00–20:00）及 <strong>ASICS 原宿旗艦店</strong>（11:00–19:00，可退稅看潮流 SportStyle 鞋款），再進明治神宮看大鳥居與森林（12 月 06:40–16:00）。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=niko+and+...+TOKYO" rel="noopener" target="_blank">📍 niko and ...</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=ABC-MART+GRAND+STAGE+原宿店" rel="noopener" target="_blank">📍 ABC-MART 原宿</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=ASICS+FLAGSHIP+HARAJUKU" rel="noopener" target="_blank">📍 ASICS 原宿</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=明治神宮" rel="noopener" target="_blank">📍 明治神宮</a></div></div>
+<div class="transit-step">🚶 點對點交通：明治神宮 → 步行 3–5 分至東急廣場「オモカド 6F 空中花園」歇腳＆金子眼鏡原宿店</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">15:00 – 16:45</span>
+<span class="stop-title">原宿・表參道近距離輕鬆逛＆空中露台歇腳（免再搭車）</span>
+</div>
+<p style="margin:0;">推薦上 <strong>東急廣場表參道「オモカド」6F 免費空中花園（おもはらの森）</strong>讓爸媽坐著歇腳看街景，或逛對面新地標「<strong>ハラカド</strong>」、室內平緩溫暖的「<strong>表參道之丘</strong>」；想逛好店可順看巷內的 <strong>BEAMS 原宿</strong>（12:00–20:00，創業旗艦店支援免稅，旁有 BEAMS BOY／PLUS）、<strong>金子眼鏡 原宿店</strong>（11:00–20:00）與 <strong>2nd STREET 原宿店</strong>（11:00–21:00，支援免稅）。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=東急プラザ表参道オモカド" rel="noopener" target="_blank">📍 東急廣場オモカド</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=東急プラザ原宿ハラカド" rel="noopener" target="_blank">📍 東急廣場ハラカド</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=金子眼鏡店+原宿店" rel="noopener" target="_blank">📍 金子眼鏡原宿</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=BEAMS+原宿" rel="noopener" target="_blank">📍 BEAMS 原宿</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=2nd+STREET+原宿店" rel="noopener" target="_blank">📍 2nd STREET 原宿</a></div></div>
+<div class="transit-step mrt-card">
+  <div class="mrt-head"><span>🚕／🚇 點對點＋回程｜表參道 ➔ 六本木 ➔ 錦糸町</span><span>去程計程車最省力</span></div>
+  <div class="mrt-note">🚕 <strong>去程推薦</strong>：17:00 看完表參道亮燈直接攔計程車約 8 分直達六本木之丘（長輩免上下轉乘）</div>
+  <div class="mrt-alt">
+    <span class="mrt-alt-label">🚇 晚間回程地鐵（約 30 分）：① 桃紅線往「新宿・都庁前」1 站 ➔ ② 轉紫線往「押上・久喜」直達回家</span>
+    <div class="mrt-route">
+      <span class="mrt-line mrt-e"><span class="mrt-code">E</span>都營大江戶線</span>
+      <span class="mrt-dir">🧭 往「新宿・都庁前」</span>
+      <span class="mrt-stn"><span class="mrt-sc mrt-e">E23</span>六本木</span>
+      <span class="mrt-conn mrt-e">1 站・2 分</span>
+      <span class="mrt-stn"><span class="mrt-sc mrt-e">E24</span>青山一丁目</span>
+      <span class="mrt-xfer">🔄 轉乘</span>
+      <span class="mrt-line mrt-z"><span class="mrt-code">Z</span>半藏門線</span>
+      <span class="mrt-dir">🧭 往「押上・久喜」</span>
+      <span class="mrt-stn"><span class="mrt-sc mrt-z">Z03</span>青山一丁目</span>
+      <span class="mrt-conn mrt-z">約 25 分</span>
+      <span class="mrt-stn"><span class="mrt-sc mrt-z">Z13</span>錦糸町</span>
+    </div>
+  </div>
+</div>
+<div class="stop night-stop">
+<div class="stop-head">
+<span class="stop-time">17:00 – 20:00</span>
+<span class="stop-title">表參道首日亮燈 ➔ 六本木之丘聖誕點燈＆晚餐（不趕東京鐵塔）</span>
+</div>
+<p style="margin:0;">17:00 先在原地拍 <strong>表參道首日冬季亮燈</strong>，接著 <strong>🚕 搭計程車約 8 分鐘</strong>（或半藏門線「表參道」1 站至「青山一丁目」轉大江戶線 1 站）直達 <strong>六本木之丘</strong>：順路逛 <strong>66 廣場</strong> ➔ <strong>大屋頂廣場聖誕市集</strong>（營業至 21:00）➔ <strong>櫸坂通「SNOW &amp; BLUE」</strong> 並就近在六本木之丘吃晚餐。<strong>🚇 回程交通</strong>：從六本木搭大江戶線或日比谷線轉乘回錦糸町（約 30 分），約 20:30 可輕鬆回到公寓。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=表参道" rel="noopener" target="_blank">📍 表參道</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=六本木ヒルズ" rel="noopener" target="_blank">📍 六本木之丘</a></div></div>
+</div>
+<div class="day-pager"><button class="pager-btn" data-tab-jump="day1" type="button">← Day 1 (11/30)</button><button class="pager-btn" data-tab-jump="day3" type="button">Day 3 (12/2) →</button></div>
+</div>
+</section>
+<!-- Day 3 (Updated!) -->
+<section id="day3">
+<div class="card">
+<div class="section-title">
+<h2>Day 3｜12/2（三）新宿御苑・Alpen TOKYO・高田馬場國際卓球＆輕鬆晚餐</h2>
+<span class="badge maple">早點回程休息</span>
+<div class="top-quick-nav"><button class="quick-step-btn" data-tab-jump="day2" title="上一頁：12/1" type="button">‹ 12/1</button><button class="quick-step-btn" data-tab-jump="day4" title="下一頁：12/3" type="button">12/3 ›</button></div></div>
+<div class="day-map-wrap real-map-box"><div class="real-map-header"><div class="day-map-title">🗺️ Day 3 實景街道地圖（新宿御苑・新宿東口・高田馬場）</div><div class="real-map-controls"><button class="map-reset-btn map-mode-btn" data-map-mode="day3" type="button">📡 離線相對圖</button><button class="map-reset-btn map-lock-btn" data-map-lock="day3" type="button">🔒 鎖定拖曳</button><button class="map-reset-btn" data-map-reset="day3" type="button">🔄 全覽</button><button class="map-reset-btn map-collapse-btn" data-map-toggle="day3" type="button">收合地圖</button></div></div><div class="leaflet-day-map" id="leaflet-map-day3"></div><div class="offline-day-map" id="offline-map-day3" style="display:none;"></div><div class="map-stop-pills" id="map-pills-day3"></div><div class="map-morning-note">🚇 早上：JR 總武線各停「錦糸町」免轉車直達「千駄ヶ谷／新宿」（約 25 分・IC ¥260）</div></div>
+<div class="timeline">
+<div class="transit-step mrt-card">
+  <div class="mrt-head"><span>🚇 出發交通｜錦糸町 ➔ 新宿御苑</span><span>黃色車廂直達・免轉車</span></div>
+  <div class="mrt-route">
+    <span class="mrt-line mrt-jb"><span class="mrt-code">JB</span>JR 總武線各停</span>
+    <span class="mrt-dir">🧭 往「新宿・中野・三鷹」方向</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-jb">JB22</span>錦糸町</span>
+    <span class="mrt-conn mrt-jb">免轉車 約 25 分</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-jb">JB12</span>千駄ヶ谷</span>
+  </div>
+  <div class="mrt-note">⚠️ 勿搭成往「千葉」方向 ｜ 🚪 <strong>千駄ヶ谷站</strong>出站即接新宿御苑「千駄ヶ谷門」最平緩（往新宿站為 JB10）</div>
+</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">09:30 – 11:30</span>
+<span class="stop-title">新宿御苑賞楓散步</span>
+</div>
+<p style="margin:0;">園區寬闊平緩、座椅與洗手間充足，上午散步最舒服。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=新宿御苑" rel="noopener" target="_blank">📍 新宿御苑</a></div></div>
+<div class="transit-step mrt-card">
+  <div class="mrt-head"><span>🚶／🚇 點對點交通｜新宿御苑 ➔ Alpen TOKYO</span><span>步行 10 分 或 紅線 2 站</span></div>
+  <div class="mrt-route">
+    <span class="mrt-line mrt-m"><span class="mrt-code">M</span>丸之內線</span>
+    <span class="mrt-dir">🧭 往「新宿・荻窪」方向</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-m">M10</span>新宿御苑前</span>
+    <span class="mrt-conn mrt-m">2 站・約 4 分</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-m">M08</span>新宿</span>
+  </div>
+  <div class="mrt-note">⚠️ 勿搭成往「東京・池袋」方向 ｜ 🚶 也可從新宿門沿大馬路平地步行約 10 分至新宿東口</div>
+</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">11:30 – 14:30</span>
+<span class="stop-title">新宿午餐 ＆ Alpen TOKYO 採買（ASICS／Mizuno・免稅 95 折）</span>
+</div>
+<p style="margin:0;">中午可在御苑旁吃「<strong>Ramen Afro Beats</strong>」（11:00–14:30，建議 11:30 前到）或新宿百貨餐廳；餐後逛 <strong>Alpen TOKYO</strong> 挑 ASICS／Mizuno 機能鞋服與運動用品（結帳出示觀光客優惠券享免稅 10%＋95 折），旁邊步行 1 分即達「<strong>OS Drug 新宿店</strong>」（10:00–19:45，批發價超便宜，<strong>只收現金、無免稅</strong>），可先買齊常備藥品與眼藥水，同條街再步行 1 分就能順逛 <strong>BEAMS JAPAN 新宿</strong>（11:00–20:00，B1–5F 含服飾與日本選物，支援免稅）。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Ramen+Afro+Beats" rel="noopener" target="_blank">📍 Ramen Afro Beats</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Alpen+TOKYO+新宿" rel="noopener" target="_blank">📍 Alpen TOKYO</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=オーエスドラッグ+新宿店" rel="noopener" target="_blank">📍 OS Drug 新宿</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=BEAMS+JAPAN+新宿" rel="noopener" target="_blank">📍 BEAMS JAPAN 新宿</a></div></div>
+<div class="transit-step mrt-card">
+  <div class="mrt-head"><span>🚇 點對點交通｜新宿 ➔ 高田馬場（國際卓球）</span><span>草綠色環狀線 2 站</span></div>
+  <div class="mrt-route">
+    <span class="mrt-line mrt-jy"><span class="mrt-code">JY</span>JR 山手線</span>
+    <span class="mrt-dir">🧭 搭「外回（往池袋・上野）」方向</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-jy">JY17</span>新宿</span>
+    <span class="mrt-conn mrt-jy">2 站・約 5 分</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-jy">JY15</span>高田馬場</span>
+  </div>
+  <div class="mrt-note">⚠️ 勿搭成「內回（往渋谷・品川）」 ｜ 🚪 <strong>早稻田口</strong>出站步行 3 分</div>
+</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">14:45 – 16:30</span>
+<span class="stop-title">國際卓球 高田馬場本店（必逛桌球專門店）</span>
+</div>
+<p style="margin:0;">逛完若想讓爸媽歇腳，車站旁有座位寬敞的「<strong>星乃珈琲店</strong>」，可在此稍作休息等吃晚餐。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=国際卓球+高田馬場店" rel="noopener" target="_blank">📍 國際卓球（高田馬場）</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=星乃珈琲店+高田馬場店" rel="noopener" target="_blank">📍 星乃珈琲店</a></div></div>
+<div class="transit-step mrt-card">
+  <div class="mrt-head"><span>🚇 回程交通｜高田馬場 ➔ 錦糸町</span><span>綠線轉黃線 約 30 分</span></div>
+  <div class="mrt-route">
+    <span class="mrt-line mrt-jy"><span class="mrt-code">JY</span>JR 山手線</span>
+    <span class="mrt-dir">🧭 內回「往新宿・渋谷」</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-jy">JY15</span>高田馬場</span>
+    <span class="mrt-conn mrt-jy">2 站・5 分</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-jy">JY17</span>新宿</span>
+    <span class="mrt-xfer">🔄 同站轉乘</span>
+    <span class="mrt-line mrt-jb"><span class="mrt-code">JB</span>JR 總武線各停</span>
+    <span class="mrt-dir">🧭 往「秋葉原・千葉」</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-jb">JB10</span>新宿</span>
+    <span class="mrt-conn mrt-jb">約 25 分</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-jb">JB22</span>錦糸町</span>
+  </div>
+  <div class="mrt-note">💡 兩線皆屬 JR 站內轉乘（免出閘門）；山手線別坐成往「池袋」，總武線別坐成往「三鷹」</div>
+</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">17:00 – 19:00</span>
+<span class="stop-title">高田馬場炸豬排「とんかつ ひなた」或回新宿晚餐 ➔ 早點回錦糸町</span>
+</div>
+<p style="margin:0;">不趕夜景！17:00 開門時可直接吃高田馬場高評價炸豬排「<strong>とんかつ ひなた</strong>」（週三有開），或搭山手線 2 站回新宿百貨悠閒用餐。早點回飯店：19:30～20:00 即可回公寓休息。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=とんかつ+ひなた+高田馬場" rel="noopener" target="_blank">📍 とんかつ ひなた</a></div></div>
+</div>
+<div class="day-pager"><button class="pager-btn" data-tab-jump="day2" type="button">← Day 2 (12/1)</button><button class="pager-btn" data-tab-jump="day4" type="button">Day 4 (12/3) →</button></div>
+</div>
+</section>
+<!-- Day 4 -->
+<section id="day4">
+<div class="card">
+<div class="section-title">
+<h2>Day 4｜12/3（四）東京大學銀杏・皇居乾通り・丸之內點燈＆東京鐵塔</h2>
+<span class="badge maple">限定公開 11/28–12/6</span>
+<div class="top-quick-nav"><button class="quick-step-btn" data-tab-jump="day3" title="上一頁：12/2" type="button">‹ 12/2</button><button class="quick-step-btn" data-tab-jump="day5" title="下一頁：12/4" type="button">12/4 ›</button></div></div>
+<div class="day-map-wrap real-map-box"><div class="real-map-header"><div class="day-map-title">🗺️ Day 4 實景街道地圖（東大本鄉・東京站皇居・芝公園鐵塔）</div><div class="real-map-controls"><button class="map-reset-btn map-mode-btn" data-map-mode="day4" type="button">📡 離線相對圖</button><button class="map-reset-btn map-lock-btn" data-map-lock="day4" type="button">🔒 鎖定拖曳</button><button class="map-reset-btn" data-map-reset="day4" type="button">🔄 全覽</button><button class="map-reset-btn map-collapse-btn" data-map-toggle="day4" type="button">收合地圖</button></div></div><div class="leaflet-day-map" id="leaflet-map-day4"></div><div class="offline-day-map" id="offline-map-day4" style="display:none;"></div><div class="map-stop-pills" id="map-pills-day4"></div></div>
+<div class="timeline">
+<div class="transit-step mrt-card">
+  <div class="mrt-head"><span>🚇 出發交通｜錦糸町 ➔ 東京大學</span><span>紫線轉紅線 約 25 分</span></div>
+  <div class="mrt-route">
+    <span class="mrt-line mrt-z"><span class="mrt-code">Z</span>半藏門線</span>
+    <span class="mrt-dir">🧭 往「渋谷・中央林間」</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-z">Z13</span>錦糸町</span>
+    <span class="mrt-conn mrt-z">約 11 分</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-z">Z08</span>大手町</span>
+    <span class="mrt-xfer">🔄 站內轉乘</span>
+    <span class="mrt-line mrt-m"><span class="mrt-code">M</span>丸之內線</span>
+    <span class="mrt-dir">🧭 往「池袋」方向</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-m">M18</span>大手町</span>
+    <span class="mrt-conn mrt-m">3 站・6 分</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-m">M21</span>本郷三丁目</span>
+  </div>
+  <div class="mrt-note">⚠️ 轉紅線時務必選往「池袋」月台（勿搭成往「東京・新宿・荻窪」） ｜ 🚶 出站走 8 分到東大赤門</div>
+</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">上午</span>
+<span class="stop-title">東京大學本鄉校區（安田講堂・銀杏大道）</span>
+</div>
+<p style="margin:0;">校園氣氛悠閒平緩，金黃銀杏搭配紅磚建築非常上相。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=東京大学+本郷キャンパス" rel="noopener" target="_blank">📍 東大本鄉</a></div></div>
+<details class="backup-details backup-stop"><summary>🍁 體力充裕備案：點開看「小石川植物園」順遊資訊</summary><div class="transit-step">🚕 備案交通：從東大搭計程車約 5–8 分前往小石川植物園（若體力充裕）</div><div class="stop">
+<div class="stop-head">
+<span class="stop-time">備案</span>
+<span class="stop-title">小石川植物園賞紅葉（視長輩體力決定）</span>
+</div>
+<p style="margin:0;">距東大搭計程車約 5～8 分鐘（09:00–16:30、最後入園 16:00，週一休園），門票 ¥500 僅收現金。人潮較少，建議只逛平緩紅葉區域約 30 分鐘即可。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=小石川植物園" rel="noopener" target="_blank">📍 小石川植物園</a></div></div></details>
+<div class="transit-step mrt-card">
+  <div class="mrt-head"><span>🚕／🚇 點對點交通｜東大 ➔ 鳥つね自然洞／東京站</span><span>紅線直達東京站</span></div>
+  <div class="mrt-note">🚕 若去吃「鳥つね自然洞」親子丼，東大校門口搭計程車 5 分直達最輕鬆</div>
+  <div class="mrt-alt">
+    <span class="mrt-alt-label">🚇 若直接前往東京站／KITTE（勿搭成往「池袋」反方向）：</span>
+    <div class="mrt-route">
+      <span class="mrt-line mrt-m"><span class="mrt-code">M</span>丸之內線</span>
+      <span class="mrt-dir">🧭 往「東京・銀座・荻窪」方向</span>
+      <span class="mrt-stn"><span class="mrt-sc mrt-m">M21</span>本郷三丁目</span>
+      <span class="mrt-conn mrt-m">4 站・約 8 分</span>
+      <span class="mrt-stn"><span class="mrt-sc mrt-m">M17</span>東京</span>
+    </div>
+  </div>
+</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">11:30 – 13:45</span>
+<span class="stop-title">午餐：鳥つね 自然洞（親子丼）或 丸之內 KITTE 餐廳 ＆ ASICS WALKING</span>
+</div>
+<p style="margin:0;"><strong>🚇 交通</strong>：從東大搭約 5 分鐘計程車至末廣町吃「<strong>鳥つね 自然洞</strong>」（11:30–14:00 午間招牌親子丼，特上親子丼限量 20 份），或搭丸之內線「本郷三丁目」直達東京站（約 8 分）在 KITTE／丸之內大樓吃免久候餐廳，從容銜接 15:00 前皇居入場；<strong>彈性順遊</strong>：餐後有空檔可逛東京站八重洲地下街「<strong>ASICS WALKING</strong>」（10:00–20:00，提供 3D 足型測量）。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=鳥つね+自然洞" rel="noopener" target="_blank">📍 鳥つね 自然洞</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=KITTE丸の内" rel="noopener" target="_blank">📍 KITTE 丸之內</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=アシックスウォーキング+東京ヤエチカ" rel="noopener" target="_blank">📍 ASICS WALKING 八重洲</a></div></div>
+<div class="transit-step">🚶 點對點交通：東京站／KITTE → 沿行幸通平地步行約 8 分至皇居坂下門（務必 15:00 前入場）</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">14:15 – 15:30（最晚 15:00 入場）</span>
+<span class="stop-title">皇居乾通り秋季一般公開賞楓（坂下門進 ➔ 乾門出）</span>
+</div>
+<p style="margin:0;">一年僅開放 9 天（11/28–12/6），免費免預約，沿約 750 公尺緩坡大道欣賞秋楓。須通過隨身行李安檢，周邊禁止路邊臨停；若超過 15:00 改逛旁邊免費的 <strong>皇居東御苑</strong>（開至 16:00、最後入場 15:30）。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=皇居坂下門" rel="noopener" target="_blank">📍 皇居坂下門</a></div></div>
+<div class="transit-step">🚶 點對點交通：乾門出來 → 散步或短程計程車約 5 分至日比谷公園／丸之內仲通</div>
+<details class="backup-details backup-stop"><summary>🍂 彈性順遊備案：點開看「日比谷公園」紅葉與順遊資訊</summary><div class="stop">
+<div class="stop-head">
+<span class="stop-time">彈性順遊</span>
+<span class="stop-title">日比谷公園（紅葉＆首賭銀杏・視現場狀況決定）</span>
+</div>
+<p style="margin:0;">免費且 24 小時開放，可依當天節奏彈性安插：若 KITTE 午餐後時間充裕可先步行 5～8 分鐘去逛（留意皇居須於 15:00 前入場）；或走完皇居乾通り從乾門出來後，搭約 5 分鐘計程車前往散步，再往北接丸之內仲通點燈。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=日比谷公園" rel="noopener" target="_blank">📍 日比谷公園</a></div></div></details>
+<div class="transit-step">🚶 點對點交通：沿丸之內仲通往南步行到底即接日比谷公園與日比谷站</div>
+<div class="stop night-stop">
+<div class="stop-head">
+<span class="stop-time">16:00 – 17:30</span>
+<span class="stop-title">丸之內仲通冬季點燈散步（往南接日比谷公園）</span>
+</div>
+<p style="margin:0;">離開皇居後在丸之內一帶喝咖啡休息，沿平坦的 <strong>丸之內仲通</strong> 欣賞香檳金冬季點燈（16:00–24:00），一路往南走到底就是日比谷公園與日比谷站。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=丸の内仲通り" rel="noopener" target="_blank">📍 丸之內仲通</a></div></div>
+<div class="transit-step mrt-card">
+  <div class="mrt-head"><span>🚇／🚕 點對點＋回程｜日比谷 ➔ 東京鐵塔 ➔ 錦糸町</span><span>深藍線 3 站直達</span></div>
+  <div class="mrt-route">
+    <span class="mrt-line mrt-i"><span class="mrt-code">I</span>都營三田線</span>
+    <span class="mrt-dir">🧭 往「目黒・日吉」方向</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-i">I08</span>日比谷</span>
+    <span class="mrt-conn mrt-i">3 站・約 5 分</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-i">I05</span>芝公園</span>
+  </div>
+  <div class="mrt-note">⚠️ 勿搭成往「西高島平」方向（也可在 <strong>I06 御成門</strong> 下車，或直接搭計程車 8 分）</div>
+  <div class="mrt-alt">
+    <span class="mrt-alt-label">🌙 拍完夜景回程：① 深藍線往「西高島平」回大手町 ➔ ② 轉紫線往「押上・久喜」回錦糸町</span>
+    <div class="mrt-route">
+      <span class="mrt-line mrt-i"><span class="mrt-code">I</span>都營三田線</span>
+      <span class="mrt-dir">🧭 往「大手町・西高島平」</span>
+      <span class="mrt-stn"><span class="mrt-sc mrt-i">I05</span>芝公園</span>
+      <span class="mrt-conn mrt-i">4 站・7 分</span>
+      <span class="mrt-stn"><span class="mrt-sc mrt-i">I09</span>大手町</span>
+      <span class="mrt-xfer">🔄 轉乘</span>
+      <span class="mrt-line mrt-z"><span class="mrt-code">Z</span>半藏門線</span>
+      <span class="mrt-dir">🧭 往「押上・久喜」</span>
+      <span class="mrt-stn"><span class="mrt-sc mrt-z">Z08</span>大手町</span>
+      <span class="mrt-conn mrt-z">約 11 分</span>
+      <span class="mrt-stn"><span class="mrt-sc mrt-z">Z13</span>錦糸町</span>
+    </div>
+  </div>
+</div>
+<div class="stop night-stop">
+<div class="stop-head">
+<span class="stop-time">17:45 – 19:30</span>
+<span class="stop-title">芝公園＆東京鐵塔塔下拍照（不登塔）＆晚餐</span>
+</div>
+<p style="margin:0;">拍完可在芝公園／大門一帶晚餐，再搭計程車或地鐵（大門大江戶線轉半藏門線）回錦糸町。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=芝公園4号地" rel="noopener" target="_blank">📍 芝公園4號地</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=東京タワー" rel="noopener" target="_blank">📍 東京鐵塔</a></div></div>
+</div>
+<div class="day-pager"><button class="pager-btn" data-tab-jump="day3" type="button">← Day 3 (12/2)</button><button class="pager-btn" data-tab-jump="day5" type="button">Day 5 (12/4) →</button></div>
+</div>
+</section>
+<!-- Day 5 -->
+<section id="day5">
+<div class="card">
+<div class="section-title">
+<h2>Day 5｜12/4（五）淺草・合羽橋・藏前・清澄白河下町漫遊</h2>
+<span class="badge maple">在地小吃＋免費賞楓</span>
+<div class="top-quick-nav"><button class="quick-step-btn" data-tab-jump="day4" title="上一頁：12/3" type="button">‹ 12/3</button><button class="quick-step-btn" data-tab-jump="day6" title="下一頁：12/5" type="button">12/5 ›</button></div></div>
+<div class="day-map-wrap real-map-box"><div class="real-map-header"><div class="day-map-title">🗺️ Day 5 實景街道地圖（淺草・合羽橋・藏前・清澄白河・錦糸町）</div><div class="real-map-controls"><button class="map-reset-btn map-mode-btn" data-map-mode="day5" type="button">📡 離線相對圖</button><button class="map-reset-btn map-lock-btn" data-map-lock="day5" type="button">🔒 鎖定拖曳</button><button class="map-reset-btn" data-map-reset="day5" type="button">🔄 全覽</button><button class="map-reset-btn map-collapse-btn" data-map-toggle="day5" type="button">收合地圖</button></div></div><div class="leaflet-day-map" id="leaflet-map-day5"></div><div class="offline-day-map" id="offline-map-day5" style="display:none;"></div><div class="map-stop-pills" id="map-pills-day5"></div></div>
+<div class="timeline">
+<div class="transit-step mrt-card">
+  <div class="mrt-head"><span>🚇／🚕 出發交通｜錦糸町 ➔ 淺草雷門</span><span>紫線轉玫瑰粉線 約 15 分</span></div>
+  <div class="mrt-route">
+    <span class="mrt-line mrt-z"><span class="mrt-code">Z</span>半藏門線</span>
+    <span class="mrt-dir">🧭 往「押上（晴空塔）」</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-z">Z13</span>錦糸町</span>
+    <span class="mrt-conn mrt-z">1 站・3 分</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-z">Z14</span>押上</span>
+    <span class="mrt-xfer">🔄 轉乘</span>
+    <span class="mrt-line mrt-a"><span class="mrt-code">A</span>都營淺草線</span>
+    <span class="mrt-dir">🧭 往「西馬込・羽田空港」</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-a">A20</span>押上</span>
+    <span class="mrt-conn mrt-a">2 站・3 分</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-a">A18</span>淺草</span>
+  </div>
+  <div class="mrt-note">⚠️ 錦糸町上車往「押上」1 站；轉淺草線往「日本橋・西馬込／羽田」（勿往成田） ｜ 🚕 也可直接搭計程車 10–12 分直達雷門</div>
+</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">上午</span>
+<span class="stop-title">淺草寺雷門・文化觀光中心 8F 免費展望台・合羽橋道具街</span>
+</div>
+<p style="margin:0;">雷門對面 8F 免費露台（09:00–22:00）可遠眺晴空塔；逛完可順道去新仲見世通的「<strong>OS Drug 淺草店</strong>」（10:00–19:45，僅收現金）採買藥妝，再沿平地走 10 分鐘到合羽橋道具街挑餐具茶具，沿途定點吃 <strong>淺草メンチ炸肉餅、花月堂菠蘿麵包、龜十銅鑼燒</strong>。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=浅草寺+雷門" rel="noopener" target="_blank">📍 淺草雷門</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=浅草文化観光センター" rel="noopener" target="_blank">📍 淺草文化觀光中心</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=オーエスドラッグ+浅草店" rel="noopener" target="_blank">📍 OS Drug 淺草</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=かっぱ橋道具街" rel="noopener" target="_blank">📍 合羽橋道具街</a></div></div>
+<div class="transit-step">🚕 點對點交通：合羽橋道具街 → 攔計程車約 5 分鐘直達藏前（省去進出地鐵樓梯）</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">下午</span>
+<span class="stop-title">藏前手作選物＆甜點（KURAMAE CANNELE・日本茶舖）</span>
+</div>
+<p style="margin:0;">逛逛文具皮革手作店，吃現烤可麗露或到 Nakamura Tea 試喝靜岡好茶歇腳。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=KURAMAE+CANNELE" rel="noopener" target="_blank">📍 藏前可麗露</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=NAKAMURA+TEA+LIFE+STORE" rel="noopener" target="_blank">📍 Nakamura Tea</a></div></div>
+<div class="transit-step mrt-card">
+  <div class="mrt-head"><span>🚇 點對點＋回程｜藏前 ➔ 清澄白河 ➔ 錦糸町</span><span>桃紅線 3 站・紫線 2 站回家</span></div>
+  <div class="mrt-route">
+    <span class="mrt-line mrt-e"><span class="mrt-code">E</span>都營大江戶線</span>
+    <span class="mrt-dir">🧭 往「両国・大門・六本木」方向</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-e">E11</span>藏前</span>
+    <span class="mrt-conn mrt-e">3 站・約 6 分</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-e">E14</span>清澄白河</span>
+  </div>
+  <div class="mrt-note">⚠️ 勿搭成往「上野御徒町・都庁前」方向 ｜ 🚪 <strong>A3 出口（有電梯）</strong>走 3 分到清澄庭園</div>
+  <div class="mrt-alt">
+    <span class="mrt-alt-label">🏠 逛完清澄白河回公寓（勿搭成往「渋谷」方向）：</span>
+    <div class="mrt-route">
+      <span class="mrt-line mrt-z"><span class="mrt-code">Z</span>半藏門線</span>
+      <span class="mrt-dir">🧭 往「押上・久喜」方向</span>
+      <span class="mrt-stn"><span class="mrt-sc mrt-z">Z11</span>清澄白河</span>
+      <span class="mrt-conn mrt-z">2 站・約 5 分</span>
+      <span class="mrt-stn"><span class="mrt-sc mrt-z">Z13</span>錦糸町</span>
+    </div>
+  </div>
+</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">14:45 – 晚上（15:00 前入園）</span>
+<span class="stop-title">清澄庭園賞楓（16:30 天黑・17:00 閉園）＆老街平價晚餐</span>
+</div>
+<p style="margin:0;">清澄庭園門票 ¥150／65 歲以上 ¥70（開至 17:00）人少好走。晚餐可在清澄白河吃 <strong>長寿庵蕎匠蕎麥麵</strong>、<strong>だるま居酒屋家常菜</strong>，或搭<strong>半藏門線 2 站（5 分鐘）直達回錦糸町</strong>吃拉麵／定食。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=清澄庭園" rel="noopener" target="_blank">📍 清澄庭園</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=そば料理+長寿庵+蕎匠" rel="noopener" target="_blank">📍 蕎匠蕎麥麵</a></div></div>
+</div>
+<div class="day-pager"><button class="pager-btn" data-tab-jump="day4" type="button">← Day 4 (12/3)</button><button class="pager-btn" data-tab-jump="day6" type="button">Day 6 (12/5) →</button></div>
+</div>
+</section>
+<!-- Day 6 -->
+<section id="day6">
+<div class="card">
+<div class="section-title">
+<h2>Day 6｜12/5（六）錦糸町半日放鬆・JL809 返台</h2>
+<span class="badge">14:30 搭 JR 去機場</span>
+<div class="top-quick-nav"><button class="quick-step-btn" data-tab-jump="day5" title="上一頁：12/4" type="button">‹ 12/4</button><button class="quick-step-btn" data-tab-jump="shopping" title="下一頁：採買" type="button">採買 ›</button></div></div>
+<div class="day-map-wrap real-map-box"><div class="real-map-header"><div class="day-map-title">🗺️ Day 6 實景街道地圖（預設聚焦錦糸町・點 3 看機場）</div><div class="real-map-controls"><button class="map-reset-btn map-mode-btn" data-map-mode="day6" type="button">📡 離線相對圖</button><button class="map-reset-btn map-lock-btn" data-map-lock="day6" type="button">🔒 鎖定拖曳</button><button class="map-reset-btn" data-map-reset="day6" type="button">🔄 全覽</button><button class="map-reset-btn map-collapse-btn" data-map-toggle="day6" type="button">收合地圖</button></div></div><div class="leaflet-day-map" id="leaflet-map-day6"></div><div class="offline-day-map" id="offline-map-day6" style="display:none;"></div><div class="map-stop-pills" id="map-pills-day6"></div></div>
+<div class="timeline">
+<div class="transit-step">🚶 點對點交通：退房後步行 3–5 分鐘將大行李寄放於 ARCAKIT（1F/5F）或 JR 北口 TERMINA 2／南口置物櫃</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">退房寄放</span>
+<span class="stop-title">錦糸町大型行李置物櫃（依人數與位置選擇）</span>
+</div>
+<p style="margin:0;">10:00 後可優先看 <strong>ARCAKIT 1F 北齋通入口（6 個）／5F 東側樓梯旁（4 個）</strong>（¥300 僅收 ¥100 硬幣）或 <strong>JR 北口 TERMINA 2 廁所前</strong>（4 個、¥700 支援 Suica）；若需多個大型櫃建議改放 <strong>JR 南口 NewDays 旁手扶梯側</strong>（10 個、¥700 支援 Suica），滿櫃可用 ecbo cloak 預約周邊店家寄放。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=JR錦糸町駅+南口" rel="noopener" target="_blank">📍 JR 錦糸町站</a></div></div>
+<div class="transit-step">🚶 點對點交通：錦糸公園、ARCAKIT（11F 展望台・UNIQLO・GU・Sundrug）與 PARCO 均在車站步行 1–4 分圈內</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">上午 – 午餐</span>
+<span class="stop-title">錦糸町悠閒半日（錦糸公園散步・ARCAKIT 11F 免費晴空塔展望台＆B1 補貨・PARCO 午餐）</span>
+</div>
+<p style="margin:0;">主方案直接在錦糸町輕鬆收尾：上午先到錦糸公園散步看銀杏，11:00 後搭電梯上 ARCAKIT 11F 免費晴空塔展望台拍照、順逛 4F UNIQLO、6F GU、B1 Sundrug 免稅藥妝補貨與 PARCO 午餐，也可彈性順逛北口旁「<strong>ASICS WALKING 錦糸町店</strong>」（10:30–19:30，有駐店選鞋師）；若長輩精神很好也可改去上野恩賜公園賞楓吃鰻魚飯（備案）。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=錦糸公園" rel="noopener" target="_blank">📍 錦糸公園</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=アルカキット錦糸町" rel="noopener" target="_blank">📍 ARCAKIT 錦糸町</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=アシックスウォーキング+錦糸町" rel="noopener" target="_blank">📍 ASICS WALKING 錦糸町</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=錦糸町PARCO" rel="noopener" target="_blank">📍 錦糸町 PARCO</a></div></div>
+<div class="transit-step mrt-card">
+  <div class="mrt-head"><span>🚆 前往機場｜錦糸町 ➔ 成田機場第2航廈</span><span>藍色線免轉車直達</span></div>
+  <div class="mrt-route">
+    <span class="mrt-line mrt-jo"><span class="mrt-code">JO</span>JR 總武線快速</span>
+    <span class="mrt-dir">🧭 往「千葉・成田空港」方向</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-jo">JO22</span>錦糸町</span>
+    <span class="mrt-conn mrt-jo">14:30 發・約 75 分</span>
+    <span class="mrt-stn"><span class="mrt-sc mrt-jo">JO36</span>空港第2ビル（成田 T2）</span>
+  </div>
+  <div class="mrt-note">⚠️ 同月台會有往「君津／木更津」的藍線，上車前務必看車頭與電子看板寫「成田空港」才上車 ｜ 💺 可加購 Green Car</div>
+</div>
+<div class="stop">
+<div class="stop-head">
+<span class="stop-time">14:30 – 18:05</span>
+<span class="stop-title">錦糸町搭 JR 總武線快速 ➔ 成田 T2 ➔ JL809 返台</span>
+</div>
+<p style="margin:0;">14:30 左右搭乘 JR 總武線快速直達機場，辦理報到與免稅採買後，搭乘 18:05 JL809 班機返回桃園（21:15 抵達）。</p>
+<div class="stop-maps"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=成田空港第2ターミナル" rel="noopener" target="_blank">📍 成田機場 T2</a></div></div>
+</div>
+<div class="day-pager"><button class="pager-btn" data-tab-jump="day5" type="button">← Day 5 (12/4)</button><button class="pager-btn" data-tab-jump="shopping" type="button">購物＆美食 →</button></div>
+</div>
+</section>
+<!-- Shopping & Food -->
+<section id="shopping">
+<div class="card">
+<div class="section-title">
+<h2>🛍️ 桌球用品、藥妝＆美食清單</h2>
+<span class="badge">爸媽重點清單</span>
+<div class="top-quick-nav"><button class="quick-step-btn" data-tab-jump="day6" title="上一頁：12/5" type="button">‹ 12/5</button><button class="quick-step-btn" data-tab-jump="tips" title="下一頁：清單" type="button">清單 ›</button></div></div>
+<div class="grid-2">
+<div class="subbox">
+<h3>🏓 桌球用品 ＆ BEAMS 採買</h3>
+<ul class="clean">
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=スーパースポーツゼビオ+オリナス錦糸町店" rel="noopener" target="_blank">Super Sports XEBIO（Olinas 錦糸町 1F）</a>：11/30 晚上（開至 21:00）</li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=Alpen+TOKYO+新宿" rel="noopener" target="_blank">Alpen TOKYO（新宿）</a>：12/2 下午安排</li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=国際卓球+高田馬場店" rel="noopener" target="_blank">國際卓球（高田馬場本店・新宿區）</a>：12/2 下午 14:45 必逛</li>
+<li><a href="https://www.beams.co.jp/zh-tw/shop/h" rel="noopener" target="_blank">BEAMS 原宿店</a>：12/1 下午表參道／原宿散步圈</li><li><a href="https://www.beams.co.jp/zh-tw/shop/j" rel="noopener" target="_blank">BEAMS JAPAN（新宿）</a>：12/2 下午新宿東口（Alpen 旁）</li></ul>
+</div>
+<div class="subbox">
+<h3>💊 藥妝採買策略</h3>
+<ul class="clean">
+<li><strong>OS Drug</strong>：批發價超便宜，注意<strong>只收現金、無免稅</strong>。</li>
+<li><strong>Sundrug（ARCAKIT 錦糸町 B1）</strong>：可刷卡＋免稅，適合最後一天補齊。</li>
+</ul>
+</div>
+<div class="subbox">
+<h3>🍽️ 必吃美食＆錦糸町口袋名單</h3>
+<ul class="clean">
+<li><strong>岩泉優格</strong>：錦糸町 Life 超市購買</li>
+<li><strong>鳥つね 自然洞</strong>：末廣町午間招牌親子丼（12/3 中午，11:30–14:00）</li>
+<li><strong>邁泉豬排（Maisen）</strong>、<strong>鰻魚飯</strong>、<strong>清澄白河蕎匠蕎麥麵</strong>（12/4 備選）</li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=らぁ麺+はやし田+錦糸町店" rel="noopener" target="_blank">らぁ麺 はやし田 錦糸町店</a>：雞鴨湯底清爽拉麵（10:00–23:00，適合 11/30 晚餐）</li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=喫茶ニット+錦糸町" rel="noopener" target="_blank">喫茶ニット（Café Knit）</a>：懷舊喫茶厚鬆餅／拿坡里麵（週日休，適合 12/5 上午）</li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=いきなりステーキ+錦糸町店" rel="noopener" target="_blank">いきなりステーキ 錦糸町店</a>（全席椅子）／<a href="https://www.google.com/maps/search/?api=1&amp;query=私立珈琲小学校+錦糸町" rel="noopener" target="_blank">私立珈琲小学校</a>（手沖咖啡）</li>
+</ul>
+</div>
+<div class="subbox night">
+<h3>✨ 2026 點燈重點時間備忘</h3>
+<ul class="clean">
+<li><strong>六本木櫸坂通</strong>：17:00～<strong>22:00</strong>（今年提早熄燈）</li>
+<li><strong>六本木聖誕市集</strong>：11:00～<strong>21:00</strong></li>
+<li><strong>東京鐵塔塔下＆芝公園</strong>：全晚亮燈（Main Deck 開至 23:00）</li>
+</ul>
+</div>
+</div>
+<div class="subbox pay-strategy-box" style="margin-top:14px;">
+<h3>💳 結帳支付分工小抄（最省手續費）</h3>
+<ul class="clean">
+<li><strong>🏆 大額百貨・桌球・服飾・Suica 儲值</strong>：全刷<strong>國泰 CUBE 卡（切換「趣旅行」）</strong>，享 3%～3.3% 無上限，扣 1.5% 手續費後仍淨賺 1.5%～1.8%。</li>
+<li><strong>🥈 路邊小店・拉麵・居酒屋（看到紅色立牌）</strong>：開<strong>玉山 Wallet「掃 PayPay」</strong>，免收 1.5% 海外手續費。</li>
+<li><strong>💴 實體現金（媽媽 ¥24,000＋自己零錢）</strong>：專門留給<strong>OS Drug 藥妝</strong>、淺草寺御守／小吃、傳統投幣食券機。</li>
+<li><strong>⚠️ 玉山 U Bear 卡</strong>：日本實體消費回饋低於手續費，僅當備用救援卡。</li>
+</ul>
+</div>
+
+<div class="day-pager"><button class="pager-btn" data-tab-jump="day6" type="button">← Day 6 (12/5)</button><button class="pager-btn" data-tab-jump="tips" type="button">出發準備 →</button></div>
+</div>
+</section>
+<!-- Weather & Checklist -->
+<section id="tips">
+<div class="card">
+<div class="section-title">
+<h2>🧥 氣溫穿搭＆出發檢查清單</h2>
+<span class="badge maple">11月底 – 12月初</span>
+<div class="top-quick-nav"><button class="quick-step-btn" data-tab-jump="shopping" title="上一頁：採買" type="button">‹ 採買</button></div></div>
+<div class="grid-2">
+<div class="subbox">
+<h3>🌡️ 東京 11/30 – 12/5 氣溫與穿搭</h3>
+<ul class="clean">
+<li><strong>氣溫參考</strong>：白天約 <strong>12°C～17°C</strong>（12 月初降至 12°C 左右），早晚及賞燈時段約 <strong>5°C～10°C</strong>，乾燥晴朗但風偏冷。</li>
+<li><strong>長輩洋蔥式穿法</strong>：發熱衣＋毛衣／刷毛中層＋<strong>防風羽絨或大衣</strong>＋圍巾、手套、好走防滑運動鞋（電車與百貨暖氣強，方便穿脫最重要）。</li>
+</ul>
+</div>
+<div class="subbox green">
+<h3>✅ 行前＆隨身檢查</h3>
+<div class="checklist-header">
+<span>點擊可打勾紀錄</span>
+<span id="checkProgress">已完成 0 / 5 項</span>
+</div>
+<label class="check-item"><input class="prep-check" data-id="suica" type="checkbox"/><span>iPhone Suica 設定完成＋爸媽實體 Suica／Welcome Suica</span></label>
+<label class="check-item"><input class="prep-check" data-id="cash" type="checkbox"/><span>準備日圓現金（OS Drug 藥妝、聖誕市集小攤位、部分餐廳）</span></label>
+<label class="check-item"><input class="prep-check" data-id="warm" type="checkbox"/><span>長輩防風外套、圍巾、手套、暖暖包（12/1、12/3 晚間賞燈用）</span></label>
+<label class="check-item"><input class="prep-check" data-id="taxi" type="checkbox"/><span>下載叫車 App（GO / Uber）方便短程接駁</span></label>
+<label class="check-item"><input class="prep-check" data-id="passport" type="checkbox"/><span>護照、Visit Japan Web QR Code、住宿地址截圖</span></label>
+
+<label class="check-item">
+<input class="prep-check" data-id="vjw_pdf" type="checkbox"/>
+<span>VJW QR Code 截圖＋旅平險保單 PDF 存進手機離線備用</span>
+</label>
+</div>
+</div>
+<div class="subbox emergency-box" style="margin-top:14px; border-color:#f0c7be; background:#fff7f5;">
+<h3>🆘 旅途緊急聯絡 ＆ 離線保底</h3>
+<ul class="clean">
+<li><strong>國泰產險 24 小時海外急難救助</strong>：<a href="tel:+886227551288"><strong>+886-2-2755-1288</strong></a>（24h 中文專員，海外就醫第一時間撥打）。</li>
+<li><strong>離線保底存手機</strong>：出發前將 <strong>Visit Japan Web QR Code 截圖</strong>、<strong>三人電子保單 PDF</strong> 與 <strong>JAL 電子機票收據</strong> 存進手機相簿，免網路也能出示。</li>
+<li><strong>日本就醫理賠必拿兩份文件</strong>：① 診斷證明書（診断書） ② 醫療費用明細收據正本（領収書＋診療明細書）。</li>
+</ul>
+</div>
+
+<div class="day-pager"><button class="pager-btn" data-tab-jump="shopping" type="button">← 購物＆美食</button><span></span></div>
+</div>
+</section>
+<footer>
+      2026 東京賞楓＆聖誕點燈隨身手冊｜離線單頁版（無須網路即可閱讀文字行程）
+    </footer>
+</main>
+<script>
+    (function () {
+      // 1. Large font toggle
+      var fontBtn = document.getElementById('fontToggleBtn');
+      function applyFontState(isLarge) {
+        document.body.classList.toggle('large-font', isLarge);
+        fontBtn.classList.toggle('is-on', isLarge);
+        fontBtn.setAttribute('aria-pressed', isLarge ? 'true' : 'false');
+        fontBtn.textContent = isLarge ? '大字體：開' : '大字體：關';
+      }
+
+      var savedLarge = false;
+      try {
+        savedLarge = localStorage.getItem('tokyo2026_large_font') === '1';
+      } catch (e) {}
+      applyFontState(savedLarge);
+
+      fontBtn.addEventListener('click', function () {
+        var next = !document.body.classList.contains('large-font');
+        applyFontState(next);
+        try {
+          localStorage.setItem('tokyo2026_large_font', next ? '1' : '0');
+        } catch (e) {}
+      });
+
+      // 2. Arrival transit tabs
+      var tabBtns = document.querySelectorAll('.tab-btn');
+      var panels = document.querySelectorAll('.transit-panel');
+      tabBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var target = btn.getAttribute('data-transit');
+          tabBtns.forEach(function (b) { b.classList.remove('active'); });
+          panels.forEach(function (p) { p.classList.remove('active'); });
+          btn.classList.add('active');
+          var el = document.getElementById('transit-' + target);
+          if (el) el.classList.add('active');
+        });
+      });
+
+      // 3. Checklist persistence
+      var checks = document.querySelectorAll('.prep-check');
+      var progressEl = document.getElementById('checkProgress');
+
+      function updateProgress() {
+        var done = 0;
+        checks.forEach(function (cb) {
+          var label = cb.closest('.check-item');
+          if (cb.checked) {
+            done++;
+            if (label) label.classList.add('done');
+          } else {
+            if (label) label.classList.remove('done');
+          }
+        });
+        progressEl.textContent = '已完成 ' + done + ' / ' + checks.length + ' 項';
+      }
+
+      checks.forEach(function (cb) {
+        var id = cb.getAttribute('data-id');
+        try {
+          if (localStorage.getItem('tokyo2026_chk_' + id) === '1') {
+            cb.checked = true;
+          }
+        } catch (e) {}
+        cb.addEventListener('change', function () {
+          try {
+            localStorage.setItem('tokyo2026_chk_' + id, cb.checked ? '1' : '0');
+          } catch (e) {}
+          updateProgress();
+        });
+      });
+      updateProgress();
+
+      // 4. Tabbed day-by-day navigation (replaces vertical waterfall)
+      var navLinks = document.querySelectorAll('.nav-link');
+      var sections = document.querySelectorAll('main section[id]');
+
+      function showTab(targetId, skipScroll) {
+        var found = false;
+        sections.forEach(function (sec) {
+          var isMatch = (sec.id === targetId);
+          sec.classList.toggle('tab-active', isMatch);
+          if (isMatch) found = true;
+        });
+        if (!found && sections.length > 0) {
+          sections[0].classList.add('tab-active');
+          targetId = sections[0].id;
+        }
+        navLinks.forEach(function (link) {
+          var href = link.getAttribute('href').slice(1);
+          var isActive = (href === targetId);
+          link.classList.toggle('active', isActive);
+          if (isActive && typeof link.scrollIntoView === 'function') {
+            try {
+              link.scrollIntoView({ behavior: skipScroll ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
+            } catch (e) {}
+          }
+        });
+        try {
+          localStorage.setItem('tokyo2026_active_tab', targetId);
+        } catch (e) {}
+        initOrRefreshDayMap(targetId);
+        if (!skipScroll) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+
+      navLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          var targetId = link.getAttribute('href').slice(1);
+          showTab(targetId, false);
+        });
+      });
+
+      document.querySelectorAll('[data-tab-jump]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          showTab(btn.getAttribute('data-tab-jump'), false);
+        });
+      });
+
+      
+      // 5. Real Interactive Leaflet Street Maps (ArcGIS World Street Map - keyless)
+      var DAY_ROUTES = {"day1": {"focusStops": [1, 2], "stops": [{"num": 1, "stopIdx": 0, "name": "成田機場第 2 航廈", "sub": "JL802 14:40 抵達，搭 16:01 JR 總武線快速或 16:15 巴士", "lat": 35.7686, "lng": 140.3887, "gmap": "https://www.google.com/maps/search/?api=1&query=Narita+Airport+Terminal+2"}, {"num": 2, "stopIdx": 0, "name": "錦糸町站／公寓", "sub": "墨田區錦糸 2 丁目（入住安頓）", "lat": 35.6961, "lng": 139.8139, "gmap": "https://www.google.com/maps/search/?api=1&query=Kinshicho+Station+Tokyo"}, {"num": 3, "stopIdx": 1, "name": "Olinas 商場／Life 超市", "sub": "步行 5 分：XEBIO 桌球、JINS、買岩泉優格", "lat": 35.6995, "lng": 139.8165, "gmap": "https://www.google.com/maps/search/?api=1&query=Olinas+Kinshicho+Tokyo"}], "legs": []}, "day2": {"stops": [{"num": 1, "stopIdx": 0, "name": "明治神宮外苑銀杏大道", "sub": "半藏門線直達青山一丁目走 5 分（備案：代代木公園）", "lat": 35.6731, "lng": 139.7242, "gmap": "https://www.google.com/maps/search/?api=1&query=Meiji+Jingu+Gaien+Ginkgo+Avenue"}, {"num": 2, "stopIdx": 1, "name": "表參道／邁泉豬排", "sub": "11:00 開門吃招牌腰內豬排", "lat": 35.6672, "lng": 139.7087, "gmap": "https://www.google.com/maps/search/?api=1&query=Maisen+Aoyama+Main+Store"}, {"num": 3, "stopIdx": 2, "name": "明治通・明治神宮・原宿", "sub": "niko and ...、ASICS、オモカド 6F、BEAMS、金子眼鏡", "lat": 35.6761, "lng": 139.6992, "gmap": "https://www.google.com/maps/search/?api=1&query=Meiji+Jingu+Tokyo"}, {"num": 4, "stopIdx": 4, "name": "六本木之丘（點燈＆晚餐）", "sub": "17:00 看完表參道亮燈後計程車約 8 分直達櫸坂通", "lat": 35.66, "lng": 139.73, "gmap": "https://www.google.com/maps/search/?api=1&query=Roppongi+Hills+Tokyo"}], "legs": []}, "day3": {"stops": [{"num": 1, "stopIdx": 0, "name": "新宿御苑賞楓", "sub": "JR 總武線直達千駄ヶ谷／新宿，園區平緩好走", "lat": 35.685, "lng": 139.71, "gmap": "https://www.google.com/maps/search/?api=1&query=Shinjuku+Gyoen+National+Garden"}, {"num": 2, "stopIdx": 1, "name": "新宿東口 Alpen TOKYO", "sub": "Alpen TOKYO（免稅95折）、OS Drug、BEAMS JAPAN", "lat": 35.6906, "lng": 139.6994, "gmap": "https://www.google.com/maps/search/?api=1&query=Alpen+TOKYO+Shinjuku"}, {"num": 3, "stopIdx": 2, "name": "高田馬場 國際卓球＆豬排", "sub": "國際卓球本店、星乃珈琲店歇腳、とんかつ ひなた晚餐", "lat": 35.7137, "lng": 139.7045, "gmap": "https://www.google.com/maps/search/?api=1&query=Kokusai+Takkyu+Takadanobaba"}], "legs": []}, "day4": {"stops": [{"num": 1, "stopIdx": 0, "name": "東京大學本鄉校區銀杏", "sub": "安田講堂前金黃銀杏大道", "lat": 35.7137, "lng": 139.7637, "gmap": "https://www.google.com/maps/search/?api=1&query=University+of+Tokyo+Hongo+Campus"}, {"num": 2, "stopIdx": 2, "name": "鳥つね 自然洞（午餐）", "sub": "末廣町招牌親子丼（計程車 5 分）", "lat": 35.6981, "lng": 139.7719, "gmap": "https://www.google.com/maps/search/?api=1&query=Toritsune+Shizendo+Tokyo"}, {"num": 3, "stopIdx": 2, "name": "東京站／KITTE", "sub": "丸之內商圈＆八重洲地下街 ASICS WALKING", "lat": 35.6808, "lng": 139.7669, "gmap": "https://www.google.com/maps/search/?api=1&query=KITTE+Marunouchi+Tokyo"}, {"num": 4, "stopIdx": 3, "name": "皇居乾通り（15:00前入場）", "sub": "2026 秋季限定開放（11/28–12/6），坂下門進", "lat": 35.6824, "lng": 139.7527, "gmap": "https://www.google.com/maps/search/?api=1&query=Imperial+Palace+Sakashita+Gate+Tokyo"}, {"num": 5, "stopIdx": 5, "name": "日比谷公園／丸之內仲通", "sub": "16:00 香檳金點燈，一路散步至日比谷站", "lat": 35.6737, "lng": 139.7561, "gmap": "https://www.google.com/maps/search/?api=1&query=Hibiya+Park+Tokyo"}, {"num": 6, "stopIdx": 6, "name": "芝公園 4 號地＆東京鐵塔", "sub": "三田線 3 站（5 分）拍鐵塔全景＋聖誕市集", "lat": 35.6564, "lng": 139.7483, "gmap": "https://www.google.com/maps/search/?api=1&query=Shiba+Park+Area+4+Tokyo+Tower"}], "legs": []}, "day5": {"stops": [{"num": 1, "stopIdx": 0, "name": "淺草雷門／8F 展望台", "sub": "雷門、文化觀光中心 8F、OS Drug 淺草店", "lat": 35.711, "lng": 139.7966, "gmap": "https://www.google.com/maps/search/?api=1&query=Kaminarimon+Asakusa+Tokyo"}, {"num": 2, "stopIdx": 0, "name": "合羽橋道具街", "sub": "廚房餐具、茶壺與食品模型街", "lat": 35.7145, "lng": 139.7888, "gmap": "https://www.google.com/maps/search/?api=1&query=Kappabashi+Kitchen+Town+Tokyo"}, {"num": 3, "stopIdx": 1, "name": "藏前（可麗露・日本茶）", "sub": "KURAMAE CANNELE、Nakamura Tea 歇腳", "lat": 35.7031, "lng": 139.7911, "gmap": "https://www.google.com/maps/search/?api=1&query=Kuramae+Station+Tokyo"}, {"num": 4, "stopIdx": 2, "name": "清澄庭園（15:00前入園）", "sub": "日式庭園賞楓（開至 17:00），長寿庵／だるま晚餐", "lat": 35.6807, "lng": 139.797, "gmap": "https://www.google.com/maps/search/?api=1&query=Kiyosumi+Garden+Tokyo"}, {"num": 5, "stopIdx": 2, "name": "錦糸町公寓", "sub": "半藏門線 2 站（5 分）直達回住處", "lat": 35.6961, "lng": 139.8139, "gmap": "https://www.google.com/maps/search/?api=1&query=Kinshicho+Station+Tokyo"}], "legs": []}, "day6": {"focusStops": [0, 1], "stops": [{"num": 1, "stopIdx": 1, "name": "錦糸公園／ARCAKIT 11F", "sub": "銀杏散步、11F 免費晴空塔景、UNIQLO／GU／Sundrug", "lat": 35.6995, "lng": 139.8165, "gmap": "https://www.google.com/maps/search/?api=1&query=ARCAKIT+Kinshicho+Tokyo"}, {"num": 2, "stopIdx": 0, "name": "錦糸町站（置物櫃＆搭車）", "sub": "取大行李，14:30 搭 JR 總武線快速直達機場", "lat": 35.6961, "lng": 139.8139, "gmap": "https://www.google.com/maps/search/?api=1&query=Kinshicho+Station+Tokyo"}, {"num": 3, "stopIdx": 2, "name": "成田機場第 2 航廈", "sub": "18:05 JL809 班機返回桃園（21:15 抵達）", "lat": 35.7686, "lng": 140.3887, "gmap": "https://www.google.com/maps/search/?api=1&query=Narita+Airport+Terminal+2"}], "legs": []}};
+      var mapInstances = {};
+      var isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
+      function getDefaultBounds(route) {
+        var pts = [];
+        if (route.focusStops && route.focusStops.length) {
+          route.focusStops.forEach(function (i) {
+            if (route.stops[i]) pts.push([route.stops[i].lat, route.stops[i].lng]);
+          });
+        } else {
+          route.stops.forEach(function (st) { pts.push([st.lat, st.lng]); });
+        }
+        return L.latLngBounds(pts);
+      }
+
+      function jumpToDayStop(dayId, stopIdx) {
+        var sec = document.getElementById(dayId);
+        if (!sec) return;
+        var stops = sec.querySelectorAll('.stop');
+        var target = stops[stopIdx];
+        if (!target) return;
+        var det = target.closest('details');
+        if (det) det.open = true;
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        target.classList.remove('stop-flash');
+        void target.offsetWidth;
+        target.classList.add('stop-flash');
+      }
+
+      function setMapDragLock(dayId, locked) {
+        var inst = mapInstances[dayId];
+        var btn = document.querySelector('[data-map-lock="' + dayId + '"]');
+        if (inst) {
+          if (locked) {
+            inst.map.dragging.disable();
+            inst.map.touchZoom.disable();
+          } else {
+            inst.map.dragging.enable();
+            inst.map.touchZoom.enable();
+          }
+        }
+        if (btn) {
+          btn.classList.toggle('is-unlocked', !locked);
+          btn.textContent = locked ? '🔒 鎖定拖曳' : '🔓 可拖曳地圖';
+        }
+      }
+
+      var mapModeState = {}; // 'online' | 'offline'
+      var offlineFullState = {};
+
+      function haversineKm(lat1, lng1, lat2, lng2) {
+        var R = 6371;
+        var dLat = (lat2 - lat1) * Math.PI / 180;
+        var dLng = (lng2 - lng1) * Math.PI / 180;
+        var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+          Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+          Math.sin(dLng / 2) * Math.sin(dLng / 2);
+        return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      }
+
+      function renderOfflinePills(dayId, route) {
+        var pillsContainer = document.getElementById('map-pills-' + dayId);
+        if (!pillsContainer) return;
+        pillsContainer.innerHTML = '';
+        route.stops.forEach(function (st, stIdx) {
+          var pill = document.createElement('button');
+          pill.type = 'button';
+          pill.className = 'map-stop-pill';
+          pill.textContent = st.num + '. ' + st.name;
+          pill.addEventListener('click', function () {
+            pillsContainer.querySelectorAll('.map-stop-pill').forEach(function (p) { p.classList.remove('is-focused'); });
+            pill.classList.add('is-focused');
+            if (mapModeState[dayId] === 'offline') {
+              var isHiddenInFocus = route.focusStops && !offlineFullState[dayId] && route.focusStops.indexOf(stIdx) === -1;
+              if (isHiddenInFocus) {
+                offlineFullState[dayId] = true;
+                renderOfflineMap(dayId, true, st.num);
+              } else {
+                showOfflinePopup(dayId, st);
+              }
+            } else if (mapInstances[dayId]) {
+              var mObj = mapInstances[dayId].markers.find(function (x) { return x.num === st.num; });
+              if (mObj) {
+                mapInstances[dayId].map.setView([st.lat, st.lng], Math.max(mapInstances[dayId].map.getZoom(), 15), { animate: true });
+                mObj.marker.openPopup();
+              }
+            }
+          });
+          pillsContainer.appendChild(pill);
+        });
+      }
+
+      function showOfflinePopup(dayId, st) {
+        var box = document.getElementById('offline-map-' + dayId);
+        if (!box) return;
+        var oldPop = box.querySelector('.offline-popup');
+        if (oldPop) oldPop.remove();
+
+        var pop = document.createElement('div');
+        pop.className = 'offline-popup';
+        pop.innerHTML =
+          '<div class="offline-popup-top">' +
+            '<div class="map-popup-title" style="margin:0;">' + st.num + '. ' + st.name + '</div>' +
+            '<button type="button" class="offline-popup-close" aria-label="關閉">✕</button>' +
+          '</div>' +
+          '<div class="map-popup-sub" style="margin:0;">' + st.sub + '</div>' +
+          '<div class="offline-popup-actions">' +
+            '<a class="map-popup-link" href="' + st.gmap + '" target="_blank" rel="noopener">📍 Google Maps ↗</a>' +
+            '<button type="button" class="map-jump-btn" style="width:auto;margin-top:0;" data-jump-day="' + dayId + '" data-jump-stop="' + st.stopIdx + '">👇 看下方行程</button>' +
+          '</div>';
+        pop.querySelector('.offline-popup-close').addEventListener('click', function () {
+          pop.remove();
+        });
+        pop.querySelector('[data-jump-day]').addEventListener('click', function () {
+          jumpToDayStop(dayId, st.stopIdx);
+        });
+        box.appendChild(pop);
+      }
+
+      function renderOfflineMap(dayId, showFull, openNum, autoReason) {
+        var route = DAY_ROUTES[dayId];
+        var box = document.getElementById('offline-map-' + dayId);
+        if (!route || !box) return;
+        offlineFullState[dayId] = !!showFull;
+
+        var visibleStops = route.stops;
+        var hiddenStops = [];
+        if (!showFull && route.focusStops && route.focusStops.length > 0) {
+          visibleStops = route.stops.filter(function (s, idx) { return route.focusStops.indexOf(idx) !== -1; });
+          hiddenStops = route.stops.filter(function (s, idx) { return route.focusStops.indexOf(idx) === -1; });
+        }
+
+        var lats = visibleStops.map(function (s) { return s.lat; });
+        var lngs = visibleStops.map(function (s) { return s.lng; });
+        var minLat = Math.min.apply(null, lats), maxLat = Math.max.apply(null, lats);
+        var minLng = Math.min.apply(null, lngs), maxLng = Math.max.apply(null, lngs);
+        var avgLat = (minLat + maxLat) / 2;
+        var cosLat = Math.cos(avgLat * Math.PI / 180);
+
+        var spanLat = Math.max(maxLat - minLat, 0.004);
+        var spanLng = Math.max((maxLng - minLng) * cosLat, 0.004);
+
+        var W = 640, H = 320, padX = 88, padY = 54;
+        var drawW = W - padX * 2, drawH = H - padY * 2;
+        var scale = Math.min(drawW / spanLng, drawH / spanLat);
+        var usedW = spanLng * scale, usedH = spanLat * scale;
+        var offX = (W - usedW) / 2, offY = (H - usedH) / 2;
+
+        function proj(st) {
+          var x = offX + ((st.lng - minLng) * cosLat) * scale;
+          var y = offY + (maxLat - st.lat) * scale;
+          return { x: x, y: y };
+        }
+
+        // Compute nice scale bar in km or m
+        var kmPerDegLat = 111.32;
+        var kmPerPx = (1 / scale) * kmPerDegLat;
+        var targetKm = kmPerPx * 95;
+        var barKm = targetKm >= 10 ? 20 : targetKm >= 5 ? 10 : targetKm >= 2 ? 5 : targetKm >= 1 ? 2 : targetKm >= 0.5 ? 1 : targetKm >= 0.25 ? 0.5 : 0.2;
+        var barPx = Math.max(40, Math.min(130, barKm / kmPerPx));
+        var barLabel = barKm >= 1 ? (barKm + ' km') : (Math.round(barKm * 1000) + ' m');
+
+        var gridSvg = '';
+        for (var gx = 80; gx < W; gx += 80) {
+          gridSvg += '<line x1="' + gx + '" y1="0" x2="' + gx + '" y2="' + H + '" stroke="#ebe4d5" stroke-width="1"/>';
+        }
+        for (var gy = 64; gy < H; gy += 64) {
+          gridSvg += '<line x1="0" y1="' + gy + '" x2="' + W + '" y2="' + gy + '" stroke="#ebe4d5" stroke-width="1"/>';
+        }
+
+        var pts = visibleStops.map(function (st) {
+          var p = proj(st);
+          return { st: st, x: p.x, y: p.y };
+        });
+
+        var markersSvg = '';
+        pts.forEach(function (pt, i) {
+          var st = pt.st;
+          var fill = (st.num === 1) ? '#9f1239' : '#b91c1c';
+          var labelRight = pt.x < W - 155;
+          var lx = labelRight ? (pt.x + 18) : (pt.x - 18);
+          var anchor = labelRight ? 'start' : 'end';
+          // Nudge label vertically if another marker is very close horizontally
+          var dy = 4;
+          for (var j = 0; j < i; j++) {
+            if (Math.abs(pts[j].x - pt.x) < 95 && Math.abs(pts[j].y - pt.y) < 26) {
+              dy = (pt.y >= pts[j].y) ? 20 : -12;
+            }
+          }
+          markersSvg +=
+            '<g class="off-pin" data-off-num="' + st.num + '" style="cursor:pointer;">' +
+              '<circle cx="' + pt.x.toFixed(1) + '" cy="' + pt.y.toFixed(1) + '" r="15" fill="' + fill + '" stroke="#ffffff" stroke-width="2.5"/>' +
+              '<text x="' + pt.x.toFixed(1) + '" y="' + (pt.y + 4.5).toFixed(1) + '" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="800">' + st.num + '</text>' +
+              '<text x="' + lx.toFixed(1) + '" y="' + (pt.y + dy).toFixed(1) + '" text-anchor="' + anchor + '" fill="#1e293b" font-size="12.5" font-weight="800" stroke="#fcfaf5" stroke-width="3.5" paint-order="stroke">' + st.name + '</text>' +
+            '</g>';
+        });
+
+        var compassSvg =
+          '<g transform="translate(604, 34)">' +
+            '<circle cx="0" cy="0" r="17" fill="#ffffff" stroke="#d6cfc2" stroke-width="1.2"/>' +
+            '<path d="M0,-11 L4,2 L0,-1 L-4,2 Z" fill="#b91c1c"/>' +
+            '<text x="0" y="12" text-anchor="middle" fill="#475569" font-size="9.5" font-weight="800">N</text>' +
+          '</g>';
+
+        var scaleSvg =
+          '<g transform="translate(16, 296)">' +
+            '<line x1="0" y1="0" x2="' + barPx.toFixed(1) + '" y2="0" stroke="#475569" stroke-width="2.5"/>' +
+            '<line x1="0" y1="-4" x2="0" y2="2" stroke="#475569" stroke-width="2"/>' +
+            '<line x1="' + barPx.toFixed(1) + '" y1="-4" x2="' + barPx.toFixed(1) + '" y2="2" stroke="#475569" stroke-width="2"/>' +
+            '<text x="' + (barPx + 6).toFixed(1) + '" y="3" fill="#475569" font-size="11" font-weight="700">約 ' + barLabel + '</text>' +
+          '</g>';
+
+        var badgeText = autoReason ? '📡 已自動切換為離線相對位置圖（點編號看詳情）' : '📡 離線相對位置圖（真實經緯度比例・點編號看詳情）';
+        var edgeHtml = '';
+        if (hiddenStops.length > 0) {
+          var hs = hiddenStops[0];
+          var ref = visibleStops[0];
+          var distKm = Math.round(haversineKm(ref.lat, ref.lng, hs.lat, hs.lng));
+          edgeHtml = '<button type="button" class="offline-edge-hint" data-off-full="1">➡️ 往東約 ' + distKm + ' km：' + hs.num + '. ' + hs.name + '（點此看全覽）</button>';
+        }
+
+        box.innerHTML =
+          '<div class="offline-map-badge">' + badgeText + '</div>' +
+          '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;height:100%;display:block;">' +
+            gridSvg + markersSvg + compassSvg + scaleSvg +
+          '</svg>' +
+          edgeHtml;
+
+        box.querySelectorAll('.off-pin').forEach(function (g) {
+          g.addEventListener('click', function () {
+            var num = parseInt(g.getAttribute('data-off-num'), 10);
+            var st = route.stops.find(function (x) { return x.num === num; });
+            if (st) showOfflinePopup(dayId, st);
+          });
+        });
+        var edgeBtn = box.querySelector('[data-off-full]');
+        if (edgeBtn) {
+          edgeBtn.addEventListener('click', function () {
+            renderOfflineMap(dayId, true);
+          });
+        }
+
+        if (openNum) {
+          var openSt = route.stops.find(function (x) { return x.num === openNum; });
+          if (openSt) showOfflinePopup(dayId, openSt);
+        }
+      }
+
+      function setMapDisplayMode(dayId, mode, autoReason) {
+        mapModeState[dayId] = mode;
+        var leafletBox = document.getElementById('leaflet-map-' + dayId);
+        var offlineBox = document.getElementById('offline-map-' + dayId);
+        var modeBtn = document.querySelector('[data-map-mode="' + dayId + '"]');
+        var lockBtn = document.querySelector('[data-map-lock="' + dayId + '"]');
+        var route = DAY_ROUTES[dayId];
+        if (!leafletBox || !offlineBox || !route) return;
+
+        if (mode === 'offline') {
+          leafletBox.style.display = 'none';
+          offlineBox.style.display = 'block';
+          if (lockBtn) lockBtn.style.display = 'none';
+          if (modeBtn) {
+            modeBtn.classList.add('is-offline');
+            modeBtn.textContent = '🗺️ 實景街道';
+          }
+          renderOfflinePills(dayId, route);
+          renderOfflineMap(dayId, !!offlineFullState[dayId], null, autoReason);
+        } else {
+          offlineBox.style.display = 'none';
+          leafletBox.style.display = 'block';
+          if (lockBtn) lockBtn.style.display = '';
+          if (modeBtn) {
+            modeBtn.classList.remove('is-offline');
+            modeBtn.textContent = '📡 離線相對圖';
+          }
+          initOrRefreshDayMap(dayId, true);
+        }
+      }
+
+      function initOrRefreshDayMap(dayId, forceOnline) {
+        var route = DAY_ROUTES[dayId];
+        if (!route) return;
+        var container = document.getElementById('leaflet-map-' + dayId);
+        if (!container) return;
+
+        if (!forceOnline && (typeof window.L === 'undefined' || navigator.onLine === false || mapModeState[dayId] === 'offline')) {
+          setMapDisplayMode(dayId, 'offline', typeof window.L === 'undefined' || navigator.onLine === false);
+          return;
+        }
+
+        if (typeof window.L === 'undefined') {
+          setMapDisplayMode(dayId, 'offline', true);
+          return;
+        }
+
+        if (mapInstances[dayId]) {
+          setTimeout(function () {
+            mapInstances[dayId].map.invalidateSize();
+            mapInstances[dayId].map.fitBounds(mapInstances[dayId].defaultBounds, { padding: [42, 42], maxZoom: 15 });
+          }, 60);
+          return;
+        }
+
+        var defaultLocked = isTouchDevice || window.innerWidth <= 768;
+        var map = L.map(container, {
+          scrollWheelZoom: false,
+          dragging: !defaultLocked,
+          touchZoom: !defaultLocked
+        });
+        var tileErrCount = 0;
+        var tileLoaded = false;
+        var tileLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+          attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, Esri Japan',
+          maxZoom: 18
+        });
+        tileLayer.on('tileload', function () { tileLoaded = true; });
+        tileLayer.on('tileerror', function () {
+          tileErrCount++;
+          if (!tileLoaded && tileErrCount >= 3 && mapModeState[dayId] !== 'offline') {
+            setMapDisplayMode(dayId, 'offline', true);
+          }
+        });
+        tileLayer.addTo(map);
+
+        var allLatlngs = [];
+        var markers = [];
+
+        route.stops.forEach(function (st, idx) {
+          var ll = [st.lat, st.lng];
+          allLatlngs.push(ll);
+          var icon = L.divIcon({
+            className: '',
+            html: '<div class="map-num-marker' + (idx === 0 ? ' is-start' : '') + '">' + st.num + '</div>',
+            iconSize: [28, 28],
+            iconAnchor: [14, 14],
+            popupAnchor: [0, -14]
+          });
+          var popupHtml =
+            '<div class="map-popup-title">' + st.num + '. ' + st.name + '</div>' +
+            '<div class="map-popup-sub">' + st.sub + '</div>' +
+            '<a class="map-popup-link" href="' + st.gmap + '" target="_blank" rel="noopener">📍 Google Maps ↗</a>' +
+            '<button type="button" class="map-jump-btn" data-jump-day="' + dayId + '" data-jump-stop="' + st.stopIdx + '">👇 看下方行程</button>';
+          var m = L.marker(ll, { icon: icon }).addTo(map).bindPopup(popupHtml);
+          markers.push({ num: st.num, marker: m });
+        });
+        renderOfflinePills(dayId, route);
+
+        container.addEventListener('click', function (ev) {
+          var jbtn = ev.target.closest('[data-jump-day]');
+          if (jbtn) {
+            jumpToDayStop(jbtn.getAttribute('data-jump-day'), parseInt(jbtn.getAttribute('data-jump-stop'), 10));
+          }
+        });
+
+        var defaultBounds = getDefaultBounds(route);
+        var fullBounds = L.latLngBounds(allLatlngs);
+        map.fitBounds(defaultBounds, { padding: [42, 42], maxZoom: 15 });
+        mapInstances[dayId] = { map: map, defaultBounds: defaultBounds, fullBounds: fullBounds, markers: markers };
+        setMapDragLock(dayId, defaultLocked);
+
+        setTimeout(function () {
+          map.invalidateSize();
+          map.fitBounds(defaultBounds, { padding: [42, 42], maxZoom: 15 });
+        }, 120);
+      }
+
+      document.querySelectorAll('[data-map-mode]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var dayId = btn.getAttribute('data-map-mode');
+          var nextMode = (mapModeState[dayId] === 'offline') ? 'online' : 'offline';
+          setMapDisplayMode(dayId, nextMode, false);
+        });
+      });
+
+      document.querySelectorAll('[data-map-reset]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var dayId = btn.getAttribute('data-map-reset');
+          if (mapModeState[dayId] === 'offline') {
+            renderOfflineMap(dayId, true);
+          } else {
+            var inst = mapInstances[dayId];
+            if (inst) {
+              inst.map.closePopup();
+              inst.map.fitBounds(inst.fullBounds, { padding: [36, 36], maxZoom: 15, animate: true });
+            }
+          }
+          var pc = document.getElementById('map-pills-' + dayId);
+          if (pc) pc.querySelectorAll('.map-stop-pill').forEach(function (p) { p.classList.remove('is-focused'); });
+        });
+      });
+
+      document.querySelectorAll('[data-map-lock]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var dayId = btn.getAttribute('data-map-lock');
+          var isCurrentlyUnlocked = btn.classList.contains('is-unlocked');
+          setMapDragLock(dayId, isCurrentlyUnlocked);
+        });
+      });
+
+      document.querySelectorAll('[data-map-toggle]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var dayId = btn.getAttribute('data-map-toggle');
+          var box = btn.closest('.real-map-box');
+          if (!box) return;
+          var collapsed = box.classList.toggle('is-collapsed');
+          btn.textContent = collapsed ? '展開地圖' : '收合地圖';
+          if (!collapsed && mapInstances[dayId]) {
+            setTimeout(function () {
+              mapInstances[dayId].map.invalidateSize();
+            }, 80);
+          }
+        });
+      });
+
+      function resolveInitialTab() {
+        var hash = window.location.hash ? window.location.hash.slice(1) : '';
+        if (hash && document.getElementById(hash)) return hash;
+        var now = new Date();
+        var y = now.getFullYear();
+        var m = String(now.getMonth() + 1).padStart(2, '0');
+        var d = String(now.getDate()).padStart(2, '0');
+        var tripDateMap = {
+          '2026-11-30': 'day1',
+          '2026-12-01': 'day2',
+          '2026-12-02': 'day3',
+          '2026-12-03': 'day4',
+          '2026-12-04': 'day5',
+          '2026-12-05': 'day6'
+        };
+        var todayKey = y + '-' + m + '-' + d;
+        if (tripDateMap[todayKey]) return tripDateMap[todayKey];
+        try {
+          var saved = localStorage.getItem('tokyo2026_active_tab');
+          if (saved && document.getElementById(saved)) return saved;
+        } catch (e) {}
+        return 'day1';
+      }
+
+      showTab(resolveInitialTab(), true);
+    })();
+  </script>
+</body>
+</html>
